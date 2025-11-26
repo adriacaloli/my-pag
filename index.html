@@ -10,7 +10,7 @@
   <style>
     body {
       margin: 0;
-      background-color: #d0e8d0; 
+      background-color: #d0e8d0; /* soft green, panna-style */
       font-family: 'Space Grotesk', sans-serif;
       color: #111;
     }
@@ -20,6 +20,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      align-items: flex-end;
       text-align: right;
     }
 
@@ -92,20 +93,76 @@
       color: inherit;
       text-decoration: underline;
     }
+      /* Side menu */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 220px;
+      padding: 40px 20px;
+      background: #c2ddc2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      font-size: 1.1rem;
+      border-right: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .side-block {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .side-block-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .side-menu a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 400;
+    }
+
+    body {
+      margin-left: 220px;
+    }
   </style>
 </head>
 
 <body>
+  <nav class="side-menu">
+    <div class="side-block">
+      <a href="#about">about</a>
+      <a href="#cv">CV</a>
+      <a href="#pubs">publications</a>
+    </div>
+
+    <div class="side-block">
+      <div class="side-block-title">other</div>
+      <a href="#skate">skateboarding</a>
+      <a href="#punk">punk</a>
+      <a href="#dj">djing</a>
+      <a href="#modelling">modelling</a>
+    </div>
+  </nav>
+
   <header>
-    <h1>adriana calahorra‑oliart</h1>
-    <p>Ph.D. in Evolutionary Biology.</p>
+    <h1>Adriana Calahorra‑Oliart</h1>
+    <p>Evolutionary biologist. Researcher. Obsessed with patterns, organisms, and strange beautiful data.</p>
   </header>
 
   <section class="section">
     <h2>About</h2>
     <p>
-      I am fascinated by biological shape and by the evolutionary questions that can be addressed with its study. 
-My research experience covers areas as varied as didactics and philosophy of science, plant defense evolution and bat taxonomy. I enjoy coding and experimenting with bioinformatic tools to address relevant questions. Passionate for transmitting knowledge. Firm believer that science should be applied in creating postive changes in the world, socially and ecologically. Interested in social justice and gender issues.
+      I study how life diversifies, adapts, and surprises us. My work blends evolutionary theory, genomics,
+      and a taste for the weird. This space will become my digital studio — part scientific portfolio,
+      part personal archive, part playground.
     </p>
   </section>
 
@@ -140,4 +197,3 @@ My research experience covers areas as varied as didactics and philosophy of sci
   </footer>
 </body>
 </html>
-
