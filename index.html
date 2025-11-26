@@ -3,26 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Page</title>
+  <title>Adriana Calahorra-Oliart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      background-color: darkseagreen;
-      font-family: sans-serif;
-      color: black;
-      margin: 40px;
-      font-size: 2rem; /* big letters */
+      margin: 0;
+      background-color: #d0e8d0; /* soft green, panna-style */
+      font-family: 'Space Grotesk', sans-serif;
+      color: #111;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+
+    header {
+      padding: 60px 8vw;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    p {
-      margin-bottom: 1rem;
+
+    header h1 {
+      font-size: 4rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.3rem;
+      max-width: 600px;
+      line-height: 1.4;
+    }
+
+    .section {
+      padding: 80px 8vw;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      margin: 0 0 20px 0;
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+
+    .section p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+    }
+
+    footer {
+      padding: 60px 8vw;
+      font-size: 1rem;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
-  <h1>Hola, soy Adriana</h1>
-  <p>Esta es mi página con fondo darkseagreen y letras grandes y negras.</p>
+  <header>
+    <h1>Adriana Calahorra‑Oliart</h1>
+    <p>Evolutionary biologist. Researcher. Obsessed with patterns, organisms, and strange beautiful data.</p>
+  </header>
+
+  <section class="section">
+    <h2>About</h2>
+    <p>
+      I study how life diversifies, adapts, and surprises us. My work blends evolutionary theory, genomics,
+      and a taste for the weird. This space will become my digital studio — part scientific portfolio,
+      part personal archive, part playground.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>A short description of something cool you researched or built.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Another project, dataset, analysis, or creative exploration.</p>
+      </div>
+      <div class="card">
+        <h3>Project Three</h3>
+        <p>A future idea, ongoing work, or a placeholder for upcoming things.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Contact</h2>
+    <p>
+      You can reach me at <a href="mailto:your-email@example.com">your-email@example.com</a>.
+      Social links, CV, and more coming soon.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Adriana Calahorra‑Oliart
+  </footer>
 </body>
 </html>
+
