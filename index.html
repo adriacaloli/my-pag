@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adriana Calahorra-Oliart</title>
+
+  <!-- Conexiones para cargar Google Fonts más rápido -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fuente principal del texto -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Fuente decorativa (creo que no la usas, pero está importada) -->
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&display=swap" rel="stylesheet">
+
+  <!-- Fuente para el menú lateral -->
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
   <style>
+    /* ====== ESTILOS GENERALES DEL BODY ====== */
     body {
-      margin: 0;
-      background-color: #d0e8d0; /* soft green, panna-style */
-      font-family: 'Space Grotesk', sans-serif;
-      color: #111;
+      margin: 0; /* quita el margen blanco por defecto */
+      background-color: #d0e8d0; /* color de fondo verde suave */
+      font-family: 'Space Grotesk', sans-serif; /* fuente general */
+      color: #111; /* texto oscuro */
     }
 
+    /* ====== HEADER SUPERIOR ====== */
     header {
-      padding: 30px 8vw;
-      display: flex;
+      padding: 30px 8vw; /* espacio alrededor del header */
+      display: flex; /* acomoda sus elementos verticalmente */
       flex-direction: column;
-      gap: 10px;
-      align-items: flex-end;
+      gap: 7px; /* espacio entre título y subtítulo */
+      align-items: flex-end; /* alinea contenido a la derecha */
       text-align: right;
     }
 
+    /* Nombre grande */
     header h1 {
-      font-size: 4rem;
+      font-size: 2rem;
       margin: 0;
-      font-weight: 5000;
-      letter-spacing: -1px;
+      font-weight: 300; /* este valor no existe; CSS lo ignora */
+      letter-spacing: -1px; /* un poco de compresión de letras */
     }
+
+    /* Subtítulo con la fuente Urbanist */
     .special-font {
-  font-family: 'Urbanist', cursive;
-  font-size: 5rem; /* adjust if you want it bigger/smaller */
-}
+      font-family: 'Urbanist', cursive;
+      font-size: 2rem; /* tamaño del subtítulo */
+    }
 
-
+    /* Texto dentro del header */
     header p {
       margin: 0;
       font-size: 1.3rem;
@@ -45,9 +60,10 @@
       line-height: 1.4;
     }
 
+    /* ====== SECCIONES GENERALES ====== */
     .section {
       padding: 80px 8vw;
-      border-top: 1px solid rgba(0,0,0,0.1);
+      border-top: 1px solid rgba(0,0,0,0.1); /* línea separadora suave */
     }
 
     .section h2 {
@@ -62,95 +78,85 @@
       line-height: 1.6;
     }
 
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.07);
-      transition: transform 0.2s ease;
-    }
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.6rem;
-    }
-
-    .card p {
-      font-size: 1rem;
-    }
-
+    /* ====== FOOTER ====== */
     footer {
       padding: 60px 8vw;
       font-size: 1rem;
       border-top: 1px solid rgba(0,0,0,0.1);
     }
 
+    /* Enlaces normales */
     a {
-      color: inherit;
+      color: inherit; /* usa el color del texto circundante */
       text-decoration: underline;
     }
-      /* Side menu */
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 160px; /* ✔ thinner (antes 220px) */
-  padding: 30px 15px;
-  background: #c2ddc2; /* ✔ mismo color que tenías */
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  font-family: 'Alfa Slab One', serif; /* ✔ change font */
-  font-size: 0.9rem; /* ✔ reduce size so it doesn’t look too heavy */
-  border-right: 1px solid rgba(0,0,0,0.1);
-}
 
-.side-block {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
+    /* ====== MENÚ LATERAL IZQUIERDO ====== */
+    .side-menu {
+      position: fixed; /* queda pegado a la izquierda todo el tiempo */
+      top: 0;
+      left: 0;
+      height: 100vh; /* ocupa toda la altura de la pantalla */
+      width: 100px; /* ancho del menú */
+      padding: 30px 15px;
+      background: #c2ddc2; /* color del menú (no se tocó) */
+      display: flex;
+      flex-direction: column;
+      gap: 7px; /* espacio entre bloques del menú */
 
-.side-block-title {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  opacity: 0.7;
-}
+      font-family: 'Alfa Slab One', serif; /* fuente específica del menú */
+      font-size: 0.9rem;
+      border-right: 1px solid rgba(0,0,0,0.1); /* línea divisoria */
+    }
 
-.side-menu a {
-  text-decoration: none;
-  color: #111;
-  font-size: 0.85rem;
-  line-height: 1.2;
-  transition: opacity 0.2s ease;
-}
+    /* Bloques dentro del menú */
+    .side-block {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-.side-menu a:hover {
-  opacity: 0.6;
-}
+    /* Títulos de bloques ("other") */
+    .side-block-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      opacity: 0.7; /* apariencia tenue */
+    }
 
-/* body shift now matches the new width */
-body {
-  margin-left: 160px; /* ✔ updated */
-}
+    /* enlaces del menú */
+    .side-menu a {
+      text-decoration: none; /* quita subrayado */
+      color: #111;
+      font-size: 0.85rem;
+      line-height: 1.2;
+      transition: opacity 0.2s ease;
+    }
 
+    .side-menu a:hover {
+      opacity: 0.6; /* se aclara al pasar el mouse */
+    }
 
+    /* Desplaza TODO el body para no taparse con el menú */
+    body {
+      margin-left: 160px;
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- ====== MENÚ LATERAL ====== -->
   <nav class="side-menu">
+
+    <!-- Primer bloque del menú -->
     <div class="side-block">
       <a href="#about">about</a>
       <a href="cv.html">CV</a>
       <a href="https://scholar.google.com/citations?user=dE6I0SsAAAAJ&hl=en&oi=ao">publications</a>
     </div>
 
+    <!-- Segundo bloque del menú -->
     <div class="side-block">
       <div class="side-block-title">other</div>
       <a href="skateboarding.html">Skateboarding</a>
@@ -158,20 +164,22 @@ body {
     </div>
   </nav>
 
+  <!-- ====== ENCABEZADO PRINCIPAL ====== -->
   <header>
-    <h1>adriana calahorra‑oliart</h1>
+    <h1>adriana calahorra-oliart</h1>
     <p class="special-font">Ph.D. in Evolutionary Biology</p>
   </header>
 
-  <section class="section">
+  <!-- ====== ABOUT ====== -->
+  <section class="section" id="about">
     <h2>about</h2>
     <p>
-    I am fascinated by biological shape and by the evolutionary questions that can be addressed with its study. 
-    Firm believer that science should be applied in creating postive changes in the world, socially and ecologically. 
+      I am fascinated by biological shape and by the evolutionary questions that can be addressed with its study. 
+      Firm believer that science should be applied in creating postive changes in the world, socially and ecologically. 
     </p>
   </section>
 
-
+  <!-- ====== CONTACT ====== -->
   <section class="section">
     <h2>Contact</h2>
     <p>
@@ -179,8 +187,10 @@ body {
     </p>
   </section>
 
+  <!-- ====== FOOTER ====== -->
   <footer>
-    © 2025 Adriana Calahorra‑Oliart
+    © 2025 Adriana Calahorra-Oliart
   </footer>
+
 </body>
 </html>
