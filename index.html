@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+  <header>
+  <div class="header-wrapper">
+
+    <img src="blurry_roses.jpg" alt="flowers" class="header-image">
+
+    <div class="header-text">
+      <h1>adriana calahorra-oliart</h1>
+      <p class="special-font">Ph.D. in Evolutionary Biology</p>
+    </div>
+
+  </div>
+</header>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adriana Calahorra-Oliart</title>
@@ -37,6 +49,26 @@
       align-items: flex-end; /* alinea contenido a la derecha */
       text-align: right;
     }
+/* Wrapper for image + text */
+.header-wrapper {
+  display: flex;            /* places image + text side-by-side */
+  align-items: center;      /* vertically aligns them */
+  justify-content: flex-end; /* keeps text right-aligned overall */
+  gap: 30px;                /* space between image and text */
+}
+
+/* The image next to your name */
+.header-image {
+  width: 160px;            /* adjust size here */
+  height: auto;
+  border-radius: 10px;     /* soften corners — optional */
+  object-fit: cover;
+}
+
+/* Container for the text */
+.header-text {
+  text-align: right;        /* keeps the text aligned exactly like before */
+}
 
     /* Nombre grande */
     header h1 {
@@ -151,14 +183,13 @@
 
     <!-- Primer bloque del menú -->
     <div class="side-block">
-      <a href="#about">about</a>
       <a href="cv.html">CV</a>
       <a href="https://scholar.google.com/citations?user=dE6I0SsAAAAJ&hl=en&oi=ao">publications</a>
     </div>
 
     <!-- Segundo bloque del menú -->
     <div class="side-block">
-      <div class="side-block-title">other</div>
+      <div class="side-block-title">---</div>
       <a href="skateboarding.html">Skateboarding</a>
       <a href="music.html">Music</a>
     </div>
@@ -172,7 +203,6 @@
 
   <!-- ====== ABOUT ====== -->
   <section class="section" id="about">
-    <h2>about</h2>
     <p>
       I am fascinated by biological shape and by the evolutionary questions that can be addressed with its study. 
       Firm believer that science should be applied in creating postive changes in the world, socially and ecologically. 
