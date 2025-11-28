@@ -1,37 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV – Adriana Calahorra-Oliart</title>
-
 <style>
+    /* Import fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Space+Grotesk:wght@300;400;500&display=swap');
+
     body {
         background: #d0e8d0;
-        color: black;
-        font-family: Arial, sans-serif;
+        color: #111;
+        font-family: "Space Grotesk", sans-serif;
         margin: 0;
         padding: 40px 60px;
         max-width: 900px;
-        line-height: 1.5;
+        line-height: 1.55;
+        margin-left: 160px; /* space for sidebar */
     }
 
+    /* Titles */
     h1, h2 {
-        font-weight: bold;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 400;
+        text-transform: none;           /* no caps */
+        letter-spacing: 0;              /* no wide text */
         margin-top: 50px;
         margin-bottom: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
     }
 
     h1 {
-        font-size: 42px;
+        font-size: 40px;
+        margin-top: 20px;
     }
 
     h2 {
         font-size: 26px;
-        border-bottom: 1px solid black;
-        padding-bottom: 5px;
+        border: none;                   /* remove black line */
+        padding-bottom: 0;
+        margin-top: 45px;
     }
 
     p, li {
@@ -40,191 +41,61 @@
     }
 
     ul {
-        margin: 0;
-        padding-left: 20px;
+        margin: 0 0 20px 0;
+        padding-left: 22px;
     }
 
     .section {
-        margin-bottom: 40px;
+        margin-bottom: 45px;
     }
+
+    /* indentation for "Candidature essay" and "Thesis" */
     .subitem {
-  margin-left: 30px;   /* ← this is your "tab" */
-  margin-bottom: 20px; /* space after the block */
-}
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+    .subitem p {
+        margin: 4px 0;
+    }
 
-.subitem p {
-  margin: 4px 0;       /* tighter spacing between the two lines */
-}
+    /* Side menu (unchanged except font) */
+    .side-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 111px;
+        padding: 40px 15px;
+        background: #c2ddc2;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        font-family: 'Alfa Slab One', serif;
+        font-size: 0.9rem;
+        border-right: 1px solid rgba(0,0,0,0.1);
+    }
 
+    .side-block {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .side-block-title {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        opacity: 0.7;
+    }
+
+    .side-menu a {
+        text-decoration: none;
+        color: #111;
+        font-size: 0.85rem;
+        line-height: 1.2;
+        transition: opacity 0.2s ease;
+    }
+
+    .side-menu a:hover {
+        opacity: 0.6;
+    }
 </style>
-</head>
-
-<body>
-
-<h1>Adriana Calahorra-Oliart</h1>
-
-<div class="section">
-<h2>Education</h2>
-<p>
-  <strong>PhD Biological Sciences. 2022.</strong> Mastozoology Museum, Universidad Nacional Autónoma de México (UNAM).
-</p>
-<div class="subitem">
-  <p><strong>Candidature essay:</strong> Use of morphological, molecular and niche characters in evolutionary studies and their integration for phylogenetic inferences and species delimitation in bats.</p>
-  <p><strong>Thesis:</strong> Diversification of <em>Glossophaga soricina</em> in Mesoamerica.</p>
-</div>
-
-<p>
-  <strong>MSc Evolutionary Biology. 2016.</strong> Institute of Ecology, UNAM.
-</p>
-
-<p>
-  <strong>BSc Biology. 2013.</strong> UNAM.
-</p>
-</div>
-
-<div class="section">
-    <h2>Certifications</h2>
-    <p>Data Science and Machine Learning, 2022. Massachusetts Institute of Technology (MIT).</p>
-</div>
-
-<div class="section">
-    <h2>Research Experience</h2>
-
-    <p><strong>Postdoctoral Fellowship (2024–2025)</strong></p>
-    <ul>
-        <li>Demographic history of rhesus macaque.</li>
-        <li>Patterns of X chromosomal vs autosomal diversity in aye-ayes.</li>
-        <li>Recombination rate estimation along rhesus macaque autosomes.</li>
-    </ul>
-
-    <p><strong>Postdoctoral Fellowship (2023–2024)</strong></p>
-    <ul>
-        <li>Morphological convergence between domestic dogs and phyllostomid bats.</li>
-        <li>Building a bioreactor for microbiome studies.</li>
-    </ul>
-
-    <p><strong>Doctoral Researcher (2016–2022)</strong></p>
-    <ul>
-        <li>Taxonomic resolution of a cryptic bat species complex using geometric morphometrics, ecological niche modeling and phylogenies.</li>
-        <li>Elevated four subspecies to species level based on findings.</li>
-    </ul>
-
-    <p><strong>Master Researcher (2013–2015)</strong></p>
-    <ul>
-        <li>Evolution of plant defense traits in <em>Datura stramonium</em>.</li>
-        <li>Showed introduced populations invest up to ten times less in defense traits.</li>
-    </ul>
-
-    <p><strong>Undergraduate Researcher (2011–2012)</strong></p>
-    <ul>
-        <li>Designed a program to teach natural selection in high school.</li>
-        <li>Developed online content for teaching evolutionary biology.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Languages</h2>
-    <ul>
-        <li>Catalan (native)</li>
-        <li>Spanish (native)</li>
-        <li>English (First Certificate, University of Cambridge)</li>
-        <li>Portuguese (conversational)</li>
-        <li>French (A2)</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Publications</h2>
-    <p>* corresponding author; + equal contribution</p>
-    <ul>
-        <li>Geometric morphometrics as a key tool of integrative taxonomy for the resolution of cryptic species in bats. Calahorra-Oliart, A. In prep. 
-        <li>Natural versus artificial selection generate distinct cranial diversification pathways in bats and domestic dogs. Calahorra-Oliart, A., Kane, A., Hutagalung, A., Yohe, L. In review. </li>
-        <li>Re‐Evaluating the Demographic History of, and Inferring the Fine‐Scale Recombination Landscape For, Wild Chinese Rhesus Macaques (Macaca mulatta). JW Terbot, A Calahorra‐Oliart +, CJ Versoza, D Shah… - American Journal of Primatology, 2025 </li>
-        <li>Interpreting patterns of X chromosomal relative to autosomal diversity in aye-ayes (Daubentonia madagascariensis). Terbot, J. W., Soni, V., Versoza, C. J., Milhaven, M., Calahorra-Oliart, A., Shah, D., ... & Jensen, J. D. 2025. bioRxiv, 2025-01. </li>
-        <li>Cranial Morphological Patterns are Independent from Abiotic Ecological Requirements in Neotropical Glossophaginae Bat Species. Calahorra-Oliart, A. *, Lira-Noriega, A., and León-Paniagua, L. 2023. Acta Chiropterologica, 24(2): 437-452. </li>
-        <li>Cryptic species in Glossophaga soricina (Chiroptera: Phyllostomidae): do morphological data support molecular evidence?. Calahorra-Oliart, A., Ospina-Garcés, S.M., and León-Paniagua, L. Journal of Mammalogy 102.1 (2021): 54-68. </li>
-        <li>Selection on tropane alkaloids in native and non-native populations of Datura stramonium. Castillo, G., Calahorra-Oliart, A. +, Núñez-Farfán, J., Valverde, P. L., Arroyo, J., Cruz, L. L., and Tapia-López, R. 2019. Ecology and Evolution, 9(18), 10176-10184. </li>
-        <li>Using non-model systems to explore plant-pollinator and plant-herbivore interactions: natural selection on plant resistance to herbivores in the native and introduced range. Valverde, P. L., Arroyo, J., Nunez-Farfan, J., Castillo, G., Calahorra, A., Perez-Barrales, R., and Tapia-Lopez, R. 2015. AoB Plants, 1-14. </li>
-        <li>Natural selection on plant resistance to herbivores in the native and introduced range. Valverde, P. L., Arroyo, J., Núñez-Farfán, J., Castillo, G., Calahorra, A., Pérez-Barrales, R., and Tapia-López, R. 2015. Natural selection on plant resistance to herbivores in the native and introduced range. AoB Plants, 7.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Conferences</h2>
-    <ul>
-        <li><strong>Geometric morphometrics as a key tool in evolutionary studies in bats.</strong> Conference by invitation. Facultad de Ciencias, UNAM. México. 2025.</li>
-        <li><strong>Extreme Diversifications and Convergences in Skull Shapes of Domestic Dogs and Phyllostomid Bats.</strong> Adriana Calahorra-Oliart, Alexa Kane, Alisa Hutagalung, Laurel Yohe. 52nd Annual Symposium North American Society for Bat Research. Guadalajara, Jalisco, México. 2024.</li>
-        <li><strong>Resolving a cryptic species complex with integrative taxonomy: the case of <em>Glossophaga soricina</em>.</strong> Adriana Calahorra-Oliart. Conference by invitation. Murcisemana Oficial. México. 2021.</li>
-        <li><strong>Geometric morphometrics and its use for vertebrate studies.</strong> Adriana Calahorra-Oliart. Conference by invitation. 1st symposium of Vertebrates of México, FES Zaragoza, UNAM. 2019.</li>
-        <li><strong>Morphological and Ecological Differentiation in <em>Glossophaga soricina</em>.</strong> Adriana Calahorra-Oliart, Lázaro Guevara and Livia León-Paniagua. 48th Annual Symposium North American Society for Bat Research. Puerto Vallarta, Jalisco, México. 2018.</li>
-        <li><strong>Adaptive evolution during invasion of novel environments: changes in anti-herbivore defense in <em>Datura stramonium</em>.</strong> Adriana Calahorra-Oliart, Laura L. Cruz, Guillermo Castillo, Juan Arroyo, Juan Núñez-Farfán, Pedro Luis Valverde Padilla & Rosalinda Tapia- López. V Congreso Mexicano de Ecología. San Luis Potosí, México. 2015.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Research Fellowships</h2>
-    <ul>
-        <li>15 de Mayo – 2 de Junio, 2024 – Yale University Peabody Museum (YPM). Estados Unidos. Muestreo de datos. Escaneos µCT. Imagenología microscópica.</li>
-            <li>6 – 29 de Abril, 2024 – Laboratorio Allen-Vercoe. University of Guelph, Canadá. Capacitación en construir y muestrear un biorreactor para análisis de microbiota de murciélagos.</li> 
-            <li>October 24 - November-13, 2017 – American Museum of Natural History (AMNH), New York, USA. Data gathering.</li>
-            <li>October 5-21, 2017 – National Museum of Natural History (NMNH), Washington D. C., USA. Data gathering.</li>
-            <li>August 1 – October 30, 2014 – Universidad de Sevilla. Research stay. Project “Hercogamy in Datura stramonium”.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Other Publications</h2>
-    <ul>
-        <li>Someone you should know… Dolores Skateboarding Magazine, 2022.</li>
-        <li>Dear Streets Diary. Dolores Skateboarding Magazine, 2022.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>SciComm</h2>
-    <ul>
-        <li>Biology, evolution, Darwin and more with Adriana Calahorra. Curioso Podcast, 2025.</li>
-        <li>Reality or fiction? the jurassic park-style resurrection of the dire wolf. Curioso Podcast, 2025.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Teaching</h2>
-    <ul>
-        <li>2025 – Geometric Morphometrics workshop. Murcisemana Oficial.</li>
-        <li>2005 – Evolution by Natural Selection course.</li>
-        <li>2023–2025 – Master student mentoring, UNC Charlotte.</li>
-        <li>2020–2023 – Private statistics tutor.</li>
-        <li>2021 – Lab professor, R Studio workshop.</li>
-        <li>2021 – Population genetics workshop.</li>
-        <li>2016–2017 – Evolution professor, UNAM.</li>
-        <li>2016–2017 – Ecology professor, UNAM.</li>
-        <li>2012 – Evolution education implementation.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Volunteering</h2>
-    <ul>
-        <li>July 18-22, 2016 – Drum teacher and Band Coach, Girls Rock Camp Alliance (Austin). Texas, USA.</li>
-        <li>August 1-5, 2016 – Drum teacher and Band Coach, Girls Rock Camp Alliance (Austin). Texas, USA.</li> 
-        <li>June 7-11, 2017 – Drum teacher and Band Coach, Girls Rock Camp Alliance (Austin). Texas, USA.</li> 
-        <li>July 24-28, 2017 – Drum teacher and Band Coach, Girls Rock Camp Alliance (Austin). Texas, USA.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Workshops Attended</h2>
-    <ul>
-        <li>2020 – Phylogenetic Systematics.</li>
-        <li>2020 – Science and Gender.</li>
-        <li>2018 – Geometric morphometrics (Crete).</li>
-        <li>2017 – Next Generation Sequencing.</li>
-        <li>2016 – Geometric morphometrics.</li>
-        <li>2015 – Academic Writing.</li>
-        <li>2012 – Scientific writing for outreach.</li>
-    </ul>
-</div>
-
-</body>
-</html>
