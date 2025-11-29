@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<body>
+
+  <nav class="side-menu">
+
+    <div class="side-block">
+      <div class="side-block-title">--</div>
+      <a href="about.html">about</a>
+      <a href="cv.html">CV</a>
+      <a href="https://scholar.google.com/citations?user=dE6I0SsAAAAJ&hl=en&oi=ao">publications</a>
+      <a href="teaching.html">teaching</a>
+    </div>
+
+    <div class="side-block">
+      <div class="side-block-title"> 
+      <pre class="ascii">
+       _   ,_,   _
+       / `'=) (='` \
+       /.-.-.\ /.-.-.\
+       `      "      `
+      </pre>
+      </div>
+      <a href="skateboarding.html">skateboarding</a>
+      <a href="music.html">music</a>
+    </div>
+
+  </nav>
+
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV – Adriana Calahorra-Oliart</title>
@@ -19,6 +46,60 @@
             line-height: 1.5;
             margin-left: 160px; /* espacio para sidebar */
         }
+        .side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 150px;
+  padding: 40px 15px;
+  text-align: center;
+  align-items: center;
+  background: #c2ddc2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: 'Alfa Slab One', serif;
+  font-size: 1.1rem;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+        body {
+  margin-left: 180px;
+}
+
+
+.side-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.side-block-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  transition: opacity 0.2s ease;
+}
+
+.side-menu a:hover {
+  opacity: 0.6;
+}
+
+pre.ascii {
+  font-family: monospace;
+  font-size: 0.7rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
 
         /* TITLES — Roboto Slab, sin caps, sin líneas */
         h1, h2 {
