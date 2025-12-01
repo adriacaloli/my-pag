@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skateboarding – Adriana Calahorra-Oliart</title>
 
+  <!-- MATCHING FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
   <style>
+
     body {
       margin: 0;
-      background: #d0e8d0;
-      color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      background-color: #d0e8d0;
+      font-family: 'Space Grotesk', sans-serif;
+      color: #111;
+      margin-left: 180px;
     }
 
-    .layout {
-      display: flex;
-    }
-
+    /* ====== SIDEBAR (MATCHES MAIN SITE) ====== */
     .side-menu {
-      width: 220px;
-      padding: 30px;
-      background: #000;
-      border-right: 1px solid #222;
-      height: 100vh;
       position: fixed;
       top: 0;
       left: 0;
+      height: 100vh;
+      width: 130px;
+      padding: 40px 15px;
+      text-align: center;
+      align-items: center;
+      background: #c2ddc2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      font-family: 'Alfa Slab One', serif;
+      font-size: 1.1rem;
+      border-right: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .side-block {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .side-block-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      opacity: 0.7;
     }
 
     .side-menu a {
-      display: block;
-      color: #fff;
       text-decoration: none;
-      margin-bottom: 12px;
-      font-size: 15px;
-      opacity: 0.7;
-      transition: opacity .2s;
+      color: #111;
+      font-size: 0.85rem;
+      line-height: 1.2;
+      transition: opacity 0.2s ease;
     }
 
     .side-menu a:hover {
-      opacity: 1;
+      opacity: 0.6;
     }
 
+    pre.ascii {
+      font-family: monospace;
+      font-size: 0.7rem;
+      line-height: 1;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ====== CONTENT ====== */
     .content {
-      margin-left: 220px;
-      width: calc(100% - 220px);
+      padding: 0;
     }
 
     /* Vertical photo */
@@ -58,15 +89,21 @@
     }
 
     .section {
-      padding: 40px 50px;
+      padding: 60px 8vw;
       max-width: 900px;
     }
 
     h1 {
       margin-top: 0;
-      font-size: 36px;
-      font-weight: 300;
-      letter-spacing: 1px;
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 40px;
     }
 
     /* Video wrapper */
@@ -75,6 +112,7 @@
       width: 100%;
       padding-top: 56.25%;
       margin-top: 20px;
+      margin-bottom: 40px;
     }
 
     .video-wrapper iframe {
@@ -91,22 +129,35 @@
 
 <body>
 
-<div class="layout">
-
+  <!-- ====== SIDEBAR ====== -->
   <nav class="side-menu">
+
     <div class="side-block">
-      <a href="index.html#about">about</a>
+      <div class="side-block-title">--</div>
+      <a href="about.html">about</a>
       <a href="cv.html">CV</a>
       <a href="https://scholar.google.com/citations?user=dE6I0SsAAAAJ&hl=en&oi=ao">publications</a>
+      <a href="teaching.html">teaching</a>
     </div>
 
     <div class="side-block">
-      <div class="side-block-title">other</div>
-      <a href="skateboarding.html">Skateboarding</a>
-      <a href="music.html">Music</a>
+      <div class="side-block-title">
+        <pre class="ascii">
+       _   ,_,   _
+       / `'=) (='` \
+       /.-.-.\ /.-.-.\
+       `      "      `
+        </pre>
+      </div>
+      <a href="skateboarding.html">skateboarding</a>
+      <a href="music.html">music</a>
+      <div class="side-block-title">--</div>
+      <a href="index.html">main</a>
     </div>
+
   </nav>
 
+  <!-- ====== MAIN CONTENT ====== -->
   <div class="content">
 
     <!-- Vertical photo -->
@@ -121,7 +172,6 @@
 
       <h2>My videopart</h2>
 
-      <!-- Fixed YouTube embed -->
       <div class="video-wrapper">
         <iframe 
           src="https://www.youtube-nocookie.com/embed/VbYhs36milQ"
@@ -139,8 +189,8 @@
       </div>
 
     </div>
+
   </div>
-</div>
 
 </body>
 </html>
