@@ -1,3 +1,6 @@
+
+
+
 .side-menu {
   position: fixed;
   top: 0;
@@ -14,6 +17,13 @@
   font-family: 'Alfa Slab One', serif;
   font-size: 1.1rem;
   border-right: 1px solid rgba(0,0,0,0.1);
+}
+.side-menu a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  transition: color 0.2s ease;
 }
 
 .side-block {
@@ -38,9 +48,6 @@
 
 .side-menu a:hover {
   background-color: #ff82c9; /* bubblegum pink hover */
-  color: white;
-  padding: 2px 4px;
-  border-radius: 4px;
 }
 
 pre.ascii {
