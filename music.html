@@ -40,7 +40,13 @@
       object-fit: cover;
       object-position: center;
     }
-
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 130px;                /* <-- foto más pegada al sidebar */
+  transform: translateX(-50px); /* <-- la muevo aún más hacia la izquierda */
+}
     .section {
       padding: 60px 8vw;
       max-width: 600px;
