@@ -22,7 +22,16 @@
       color: #111;
       margin-left: 180px;
     }
-
+  <!-- SIDEBAR LOADED FROM sidebar.html -->
+  <div id="sidebar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById("sidebar").innerHTML = html;
+      });
+  </script>
+    
       <!-- SIDEBAR CSS -->
   <link rel="stylesheet" href="sidebar.css">
 
@@ -128,32 +137,15 @@
 <body>
 
   <!-- ====== SIDEBAR ====== -->
-  <nav class="side-menu">
-
-    <div class="side-block">
-      <div class="side-block-title">--</div>
-      <a href="about.html">about</a>
-      <a href="cv.html">CV</a>
-      <a href="https://scholar.google.com/citations?user=dE6I0SsAAAAJ&hl=en&oi=ao">publications</a>
-      <a href="teaching.html">teaching</a>
-    </div>
-
-    <div class="side-block">
-      <div class="side-block-title">
-        <pre class="ascii">
-       _   ,_,   _
-       / `'=) (='` \
-       /.-.-.\ /.-.-.\
-       `      "      `
-        </pre>
-      </div>
-      <a href="skateboarding.html">skateboarding</a>
-      <a href="music.html">music</a>
-      <div class="side-block-title">--</div>
-      <a href="index.html">main</a>
-    </div>
-
-  </nav>
+  <!-- SIDEBAR LOADED FROM sidebar.html -->
+  <div id="sidebar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById("sidebar").innerHTML = html;
+      });
+  </script>
 
   <!-- ====== MAIN CONTENT ====== -->
   <div class="content">
