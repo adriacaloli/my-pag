@@ -13,81 +13,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
 
+  <!-- SIDEBAR CSS -->
+  <link rel="stylesheet" href="sidebar.css">
+
   <style>
     .section a:visited {
-  color: #FF5DA2; /* bubblegum pink */
-}
-
+      color: #FF5DA2; /* bubblegum pink */
+    }
 
     body {
       margin: 0;
       background-color: #d0e8d0;
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: 'Space-Grotesk', sans-serif;
       color: #111;
       margin-left: 180px; /* leave space for the sidebar */
     }
 
-    /* ====== SIDEBAR (IDENTICAL TO HOMEPAGE) ====== */
-    .side-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 130px;
-      padding: 40px 15px;
-      text-align: center;
-      align-items: center;
-      background: #c2ddc2;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      font-family: 'Alfa Slab One', serif;
-      font-size: 1.1rem;
-      border-right: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .side-block {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .side-block-title {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      opacity: 0.7;
-    }
-
-    .side-menu a {
-      text-decoration: none;
-      color: #111;
-      font-size: 0.85rem;
-      line-height: 1.2;
-      transition: opacity 0.2s ease;
-    }
-
-    .side-menu a:hover {
-      opacity: 0.6;
-    }
-
-    pre.ascii {
-      font-family: monospace;
-      font-size: 0.7rem;
-      line-height: 1;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* ====== MAIN CONTENT ====== */
     .content {
       padding: 0;
     }
 
-    /* Banner */
     .banner {
       width: 90%;
       height: auto;
-      max-width: 300px
+      max-width: 300px;
       object-fit: cover;
       object-position: center;
     }
@@ -110,11 +59,10 @@
       font-weight: 600;
     }
 
-    /* Video wrapper */
     .video-wrapper {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 */
+      padding-top: 56.25%;
       margin-top: 20px;
       margin-bottom: 40px;
     }
@@ -133,34 +81,17 @@
 
 <body>
 
-  <!-- ====== SIDEBAR ====== -->
-  <nav class="side-menu">
+  <!-- SIDEBAR LOADED FROM sidebar.html -->
+  <div id="sidebar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById("sidebar").innerHTML = html;
+      });
+  </script>
 
-    <div class="side-block">
-      <div class="side-block-title">--</div>
-      <a href="about.html">about</a>
-      <a href="cv.html">CV</a>
-      <a href="https://scholar.google.com/citations?user=dE6I0SsAAAAJ&hl=en&oi=ao">publications</a>
-      <a href="teaching.html">teaching</a>
-    </div>
-    <div class="side-block">
-      <div class="side-block-title">
-        <pre class="ascii">
-       _   ,_,   _
-       / `'=) (='` \
-       /.-.-.\ /.-.-.\
-       `      "      `
-        </pre>
-      </div>
-      <a href="skateboarding.html">skateboarding</a>
-      <a href="music.html">music</a>
-      <div class="side-block-title">--</div>
-      <a href="index.html">main</a>
-    </div>
-
-  </nav>
-
-  <!-- ====== MAIN CONTENT ====== -->
+  <!-- MAIN CONTENT -->
   <div class="content">
 
     <img src="music-banner.jpg" class="banner">
@@ -169,15 +100,14 @@
       <h1>Music</h1>
 
       <p>
-        Some years ago, I  had a band with which I made very beautiful music. 
+        Some years ago, I had a band with which I made very beautiful music. 
         I was the lead singer and the drummer. 
         It was described as <a href="https://www.youtube.com/watch?v=Ss9e0IvTnRA&list=RDSs9e0IvTnRA&start_radio=1"target="_blank" rel="noopener noreferrer">“the most saccharine set of pop-punk tunes to ever grace my ears in such a long time”</a> by <a href="https://www.youtube.com/@jimmythedog."target="_blank" rel="noopener noreferrer">Jimmy</a>,
         as “simple punk with melodic leads and a sorta snotty woman singer” by <a href="https://www.discogs.com/release/9334803-Olvido-Demo" target="_blank" rel="noopener noreferrer"> Richter Scale Records</a>, 
         as “Punk with popish melodies to tap your feet to” by <a href="https://www.maximumrocknroll.com/" target="_blank" rel="noopener noreferrer">Maximum Rocknroll</a> and as “música borrosa” by <a href="https://ru.dgb.unam.mx/bitstreams/90828a4a-7c35-413f-ad63-b211bbf565dd/download"target="_blank" rel="noopener noreferrer">Yire</a>. 
         You can listen to it <a href="https://olvido1988.bandcamp.com"target="_blank" rel="noopener noreferrer">here</a>. 
         I’d be very happy to find the time and the people to play music again. 
-        <br>
-        <br>
+        <br><br>
         Sometimes, I DJ in my free time. I like high energy music.<br>
         These are some of my mixes. You can listen to more in my <a href="https://soundcloud.com/adrianarchy" target="_blank" rel="noopener noreferrer">Soundcloud.</a> 
       </p>
