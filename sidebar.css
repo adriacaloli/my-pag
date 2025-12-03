@@ -23,7 +23,7 @@
   color: #111;
   font-size: 0.85rem;
   line-height: 1.2;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
 .side-block {
@@ -47,8 +47,10 @@
 }
 
 .side-menu a:hover {
-  background-color: #ff82c9; /* bubblegum pink hover */
+  color: #ff82c9; /* bubblegum pink text */
+  background-color: transparent; /* no rectangle */
 }
+
 
 pre.ascii {
   font-family: monospace;
