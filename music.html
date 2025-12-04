@@ -87,6 +87,69 @@
       height: 100%;
       border: none;
     }
+/* ====== MOBILE FIXES ====== */
+@media (max-width: 700px) {
+
+  body {
+    margin-left: 0; /* remove big sidebar gap */
+  }
+
+  /* Sidebar becomes a top bar */
+  .side-menu {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .side-block {
+    flex-direction: row;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .side-block-title {
+    display: none; /* too cramped on mobile */
+  }
+
+  pre.ascii {
+    display: none; /* the bat would break the layout */
+  }
+
+  /* Content takes full width */
+  .content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Banner and images scale properly */
+  .banner,
+  .photo-vertical img {
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  /* Text readable on mobile */
+  .section {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
 
   </style>
 </head>
