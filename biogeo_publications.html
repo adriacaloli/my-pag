@@ -26,7 +26,7 @@
       line-height: 1.6;
     }
 
-    /* NAVBAR (same as before) */
+    /* NAVBAR */
     .navbar {
       position: fixed;
       top: 0;
@@ -43,13 +43,15 @@
       display: flex;
       justify-content: center;
       padding: 15px 20px;
-      gap: 25px;
+      gap: 30px;
     }
 
     .nav-container a {
       text-decoration: none;
-      color: var(--text-color);
-      font-size: 0.95rem;
+      color: #1f3a5f;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
       transition: color 0.2s ease;
     }
 
@@ -57,36 +59,43 @@
       color: var(--accent);
     }
 
+    .nav-container a.active {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
     /* CONTENT */
     .container {
       max-width: var(--max-width);
       margin: auto;
       padding: 120px 20px 60px;
+      text-align: center;
     }
 
-    .pub-list {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
+    h2 {
+      color: var(--accent);
+      font-size: 1.6rem;
+      margin-bottom: 30px;
     }
 
-    .pub-item {
-      font-size: 0.98rem;
+    .pubs {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
     }
 
-    .pub-item a {
+    .pubs p {
+      margin-bottom: 25px;
+      font-size: 1rem;
+    }
+
+    .pubs a {
       color: var(--accent);
       text-decoration: none;
     }
 
-    .pub-item a:hover {
+    .pubs a:hover {
       text-decoration: underline;
-    }
-
-    /* subtle separation */
-    .pub-item:not(:last-child) {
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 12px;
     }
 
   </style>
@@ -97,37 +106,40 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.html">Main</a>
-      <a href="#">Team</a>
-      <a href="publications.html">Publications</a>
-      <a href="#">Contact</a>
+      <a href="biogeo.html">Main</a>
+      <a href="biogeo_team.html">Team</a>
+      <a href="biogeo_publications.html" class="active">Publications</a>
+      <a href="biogeo_contact.html">Contact</a>
     </div>
   </nav>
 
   <!-- CONTENT -->
   <div class="container">
 
-    <div class="pub-list">
+    <h2>Publications</h2>
 
-      <div class="pub-item">
-        Juárez-Ramírez et al. 2024. Assessing the potential role of different land covers for conserving threatened amphibian diversity...
-        <br>
-        <a href="https://doi.org/10.1016/j.biocon.2024.110790" target="_blank">DOI</a>
-      </div>
+    <div class="pubs">
 
-      <div class="pub-item">
-        Papaqui-Bello et al. 2024. Ant species distribution models reveal mixed elevational diversity patterns...
-        <br>
-        <a href="https://doi.org/10.13102/sociobiology.v71i2.10503" target="_blank">DOI</a>
-      </div>
+      <p>
+      Juárez-Ramírez, María Chanel, Andrés Lira-Noriega, Robert H. Manson, Javier Nori, & Eduardo Pineda. 2024.
+      Assessing the potential role of different land covers for conserving threatened amphibian diversity in a human-modified tropical mountain landscape.
+      <em>Biological Conservation, 299: 110790.</em><br>
+      <a href="https://doi.org/10.1016/j.biocon.2024.110790" target="_blank">https://doi.org/10.1016/j.biocon.2024.110790</a>
+      </p>
 
-      <div class="pub-item">
-        Tinoco-Domínguez et al. 2024. American mistletoes: A dataset of Phoradendron species...
-        <br>
-        <a href="https://doi.org/10.1002/ecy.4394" target="_blank">DOI</a>
-      </div>
+      <p>
+      Papaqui-Bello, Sonia Itzel, Andrés Lira-Noriega, & Roger Guevara. 2024.
+      Ant species distribution models reveal mixed elevational diversity patterns in complete elevation gradients.
+      <em>Sociobiology, 71(2).</em><br>
+      <a href="https://doi.org/10.13102/sociobiology.v71i2.10503" target="_blank">https://doi.org/10.13102/sociobiology.v71i2.10503</a>
+      </p>
 
-      <!-- ADD MORE BELOW -->
+      <p>
+      Tinoco-Domínguez, Eurídice et al. 2024.
+      American mistletoes: A dataset of Phoradendron species and their hosts across their distribution range.
+      <em>Ecology.</em><br>
+      <a href="https://doi.org/10.1002/ecy.4394" target="_blank">https://doi.org/10.1002/ecy.4394</a>
+      </p>
 
     </div>
 
