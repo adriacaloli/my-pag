@@ -26,36 +26,46 @@
       line-height: 1.6;
     }
 
+    /
     /* NAVBAR */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(245, 247, 246, 0.9);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid #e0e0e0;
-      z-index: 1000;
-    }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(245, 247, 246, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
+}
 
-    .nav-container {
-      max-width: var(--max-width);
-      margin: auto;
-      display: flex;
-      justify-content: center;
-      padding: 15px 20px;
-      gap: 20px;
-    }
+.nav-container {
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 15px 20px;
+  gap: 30px; /* slightly more breathing room */
+}
 
-    .nav-container a {
-      text-decoration: none;
-      color: var(--text-color);
-      font-size: 0.95rem;
-      transition: color 0.2s ease;
-    }
+.nav-container a {
+  text-decoration: none;
+  color: #1f3a5f; /* dark blue instead of grey */
+  font-size: 1rem;
+  font-weight: 500; /* slightly bolder */
+  letter-spacing: 0.3px; /* subtle polish */
+  transition: color 0.2s ease, transform 0.15s ease;
+}
 
-    .nav-container a:hover {
-      color: var(--accent);
-    }
+.nav-container a:hover {
+  color: var(--accent);
+  transform: translateY(-1px); /* tiny lift effect */
+}
+
+/* ACTIVE PAGE (you'll apply this manually per page) */
+.nav-container a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
 
     /* MAIN CONTENT */
     .container {
