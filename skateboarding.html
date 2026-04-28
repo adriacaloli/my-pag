@@ -6,68 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skateboarding – Adriana Calahorra-Oliart</title>
 
-  <!-- MATCHING FONTS -->
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-  
-  <!-- SIDEBAR CSS -->
+
+  <!-- SHARED STYLES -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- SIDEBAR -->
   <link rel="stylesheet" href="sidebar.css">
+
   <style>
-    .section a:visited {
-      color: #FF5DA2; /* bubblegum pink */
-    }
-    body {
-      margin: 0;
-      background-color: #d0e8d0;
-      font-family: 'Space Grotesk', sans-serif;
-      color: #111;
-      margin-left: 180px;
-    }
+    /* ===== PAGE-SPECIFIC ONLY ===== */
 
-        .content {
-      padding: 0;
-    }
-    
-
-    body {
-      margin: 0;
-      background-color: #d0e8d0;
-      font-family: 'Space-Grotesk', sans-serif;
-      color: #111;
-      margin-left: 180px; /* leave space for the sidebar */
-    }
-
-
-
-    .side-block-title {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      opacity: 0.7;
-    }
-
-    .side-menu a {
-      text-decoration: none;
-      color: #111;
-      font-size: 0.85rem;
-      line-height: 1.2;
-      transition: opacity 0.2s ease;
-    }
-
-    .side-menu a:hover {
-      opacity: 0.6;
-    }
-
-    pre.ascii {
-      font-family: monospace;
-      font-size: 0.7rem;
-      line-height: 1;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Vertical photo */
     .photo-vertical img {
       width: 100%;
       max-width: 600px;
@@ -77,24 +30,20 @@
     }
 
     .section {
-      padding: 60px 8vw;
       max-width: 900px;
     }
 
     h1 {
       margin-top: 0;
       font-size: 3rem;
-      font-weight: 600;
-      letter-spacing: -1px;
     }
 
     h2 {
       font-size: 1.8rem;
-      font-weight: 600;
       margin-top: 40px;
     }
 
-    /* Video wrapper */
+    /* VIDEO */
     .video-wrapper {
       position: relative;
       width: 100%;
@@ -111,77 +60,34 @@
       height: 100%;
       border: none;
     }
-/* ====== MOBILE FIXES ====== */
-@media (max-width: 700px) {
 
-  body {
-    margin-left: 0; /* remove big sidebar gap */
-  }
+    /* MOBILE */
+    @media (max-width: 700px) {
 
-  /* Sidebar becomes a top bar */
-  .side-menu {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 20px 0;
-    border-right: none;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
+      .content {
+        padding: 20px;
+      }
 
-  .side-block {
-    flex-direction: row;
-    gap: 15px;
-    text-align: center;
-  }
+      .photo-vertical img {
+        margin: 20px 0;
+      }
 
-  .side-block-title {
-    display: none; /* too cramped on mobile */
-  }
+      h1 {
+        font-size: 2.2rem;
+      }
 
-  pre.ascii {
-    display: none; /* the bat would break the layout */
-  }
+      h2 {
+        font-size: 1.4rem;
+      }
 
-  /* Content takes full width */
-  .content {
-    width: 100%;
-    padding: 20px;
-  }
-
-  /* Banner and images scale properly */
-  .banner,
-  .photo-vertical img {
-    max-width: 100%;
-    width: 100%;
-    margin: 20px 0;
-  }
-
-  /* Text readable on mobile */
-  .section {
-    padding: 20px;
-    max-width: 100%;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-}
+    }
 
   </style>
 </head>
 
 <body>
 
-  <!-- ====== SIDEBAR ====== -->
-  <!-- SIDEBAR LOADED FROM sidebar.html -->
+  <!-- SIDEBAR -->
   <div id="sidebar"></div>
   <script>
     fetch("sidebar.html")
@@ -191,15 +97,17 @@
       });
   </script>
 
-  <!-- ====== MAIN CONTENT ====== -->
+  <!-- CONTENT -->
   <div class="content">
 
-    <!-- Vertical photo -->
+    <!-- IMAGE -->
     <div class="photo-vertical">
       <img src="skatephoto_r.jpg" alt="Skateboarding photo">
     </div>
 
+    <!-- TEXT -->
     <div class="section">
+
       <h1>Skateboarding</h1>
 
       <p>I've been skateboarding since 2003.</p>
@@ -207,19 +115,13 @@
       <h2>My videopart</h2>
 
       <div class="video-wrapper">
-        <iframe 
-          src="https://www.youtube-nocookie.com/embed/VbYhs36milQ"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/VbYhs36milQ" allowfullscreen></iframe>
       </div>
 
       <h2>Barcelona Summer 2025</h2>
 
       <div class="video-wrapper">
-        <iframe 
-          src="https://www.youtube-nocookie.com/embed/cvqFCiELD1U"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/cvqFCiELD1U" allowfullscreen></iframe>
       </div>
 
     </div>
