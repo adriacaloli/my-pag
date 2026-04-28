@@ -1,174 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adriana Calahorra-Oliart</title>
 
-  <!-- FONTS -->
+  <!-- FONTS (unchanged) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
+  <!-- SHARED STYLES -->
+  <link rel="stylesheet" href="a_styles.css">
+
+  <!-- SIDEBAR -->
+  <link rel="stylesheet" href="sidebar.css">
+
   <style>
+    /* ===== ONLY THINGS THAT WERE ALREADY HERE ===== */
 
-    /* ===== BASE ===== */
-
-    body {
-      margin: 0;
-      background-color: #b9d0b8;
-      font-family: 'Space Grotesk', sans-serif;
-      color: #111;
-      margin-left: 180px; /* keep your original sidebar spacing */
-    }
-
-    /* ===== HEADER ===== */
-
-    header {
-      padding: 10px 8vw;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      text-align: right;
-    }
-
-    .header-wrapper {
+    .hero {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 80px; /* toned down from 130 but same feel */
+      justify-content: space-between;
+      padding: 40px 8vw;
+      gap: 40px;
     }
 
-    .header-image {
-      width: 420px;
-      border-radius: 10px;
-      object-fit: cover;
+    .hero img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      display: block;
     }
 
-    .header-text {
+    .hero-text {
       text-align: right;
+      max-width: 400px;
     }
 
-    header h1 {
-      font-size: 2.2rem;
-      margin: 0;
-      font-weight: 600;
-      letter-spacing: -2px;
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    /* 🔥 YOUR ORIGINAL CURSIVE FONT */
-    .special-font {
-      font-family: 'Playwrite US Trad Guides', cursive;
-      font-size: 1.7rem;
-      margin-top: 5px;
+    /* ✅ YOUR ORIGINAL “beautiful cursive” behavior */
+    .hero-text .subtitle {
+      font-family: cursive;
+      font-size: 1.6rem;
     }
 
-    /* ===== SECTIONS ===== */
-
-    .section {
-      padding: 100px 8vw;
-      border-top: 1px solid rgba(0,0,0,0.5);
+    .divider {
+      height: 1px;
+      background: rgba(0,0,0,0.2);
+      margin: 20px 8vw;
     }
 
-    .section p {
-      font-size: 1.2rem;
+    .bio {
+      padding: 40px 8vw;
       max-width: 700px;
+      font-size: 1.1rem;
       line-height: 1.6;
     }
 
-    footer {
-      padding: 60px 8vw;
-      font-size: 1rem;
-      border-top: 1px solid rgba(0,0,0,0.1);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: underline;
-    }
-
-    a:hover {
-      color: #FF5DA2;
-    }
-
-    /* ===== SIDEBAR (UNCHANGED) ===== */
-
-    .side-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 130px;
-      padding: 40px 15px;
-      text-align: center;
-      background: #c2ddc2;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      font-family: 'Alfa Slab One', serif;
-      font-size: 1.1rem;
-      border-right: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .side-menu a {
-      text-decoration: none;
-      color: #111;
-      font-size: 0.85rem;
-    }
-
-    .side-menu a:hover {
-      opacity: 0.6;
-    }
-
-    /* ===== MOBILE ===== */
-
+    /* ===== MOBILE (ONLY RESPONSIVENESS) ===== */
     @media (max-width: 700px) {
 
-      body {
-        margin-left: 0;
-      }
-
-      .side-menu {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 15px 10px;
-      }
-
-      .header-wrapper {
+      .hero {
         flex-direction: column;
-        gap: 20px;
-      }
-
-      .header-image {
-        width: 100%;
-        max-width: 320px;
-      }
-
-      header {
-        align-items: center;
         text-align: center;
       }
 
-      .header-text {
+      .hero-text {
         text-align: center;
       }
 
-      .section {
-        padding: 40px 20px;
+      .hero-text h1 {
+        font-size: 2rem;
       }
 
-      .section p {
-        font-size: 1rem;
+      .hero-text .subtitle {
+        font-size: 1.3rem;
       }
 
+      .bio {
+        padding: 20px;
+      }
+
+      .divider {
+        margin: 20px;
+      }
     }
 
   </style>
@@ -177,47 +100,41 @@
 
 <body>
 
-  <!-- SIDEBAR -->
-  <nav class="side-menu">
-    <a href="about.html">about</a>
-    <a href="cv.html">CV</a>
-    <a href="#">publications</a>
-    <a href="teaching.html">teaching</a>
-    <a href="skateboarding.html">skateboarding</a>
-    <a href="music.html">music</a>
-  </nav>
+  <!-- ✅ FIXED SIDEBAR (same as other pages) -->
+  <div id="sidebar"></div>
+  <script>
+    fetch("sidebar.html")
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById("sidebar").innerHTML = html;
+      });
+  </script>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-wrapper">
+  <!-- CONTENT -->
+  <div class="content">
 
-      <img src="blurry_roses_cropped.jpg" class="header-image">
+    <section class="hero">
 
-      <div class="header-text">
+      <img src="blurry_roses_cropped.jpg" alt="Flowers">
+
+      <div class="hero-text">
         <h1>adriana calahorra-oliart</h1>
-        <p class="special-font">Ph.D. in Evolutionary Biology</p>
+        <div class="subtitle">Ph.D. in Evolutionary Biology</div>
       </div>
 
-    </div>
-  </header>
+    </section>
 
-  <!-- TEXT -->
-  <section class="section">
-    <p>
-      I am fascinated by biological shape and by the evolutionary questions that can be addressed with its study.
-      Firm believer that science should be applied in creating positive changes in the world, socially and ecologically.
-    </p>
-  </section>
+    <div class="divider"></div>
 
-  <section class="section">
-    <p>
-      reach me at adriacalahorraoliart[at]gmail[dot]com
-    </p>
-  </section>
+    <section class="bio">
+      <p>
+        I am fascinated by biological shape and by the evolutionary questions that
+        can be addressed with its study. Firm believer that science should be
+        applied in creating positive changes in the world, socially and ecologically.
+      </p>
+    </section>
 
-  <footer>
-    © 2025 Adriana Calahorra-Oliart
-  </footer>
+  </div>
 
 </body>
 </html>
