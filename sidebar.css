@@ -59,3 +59,36 @@ pre.ascii {
   margin: 0;
   padding: 0;
 }
+/* ===== MOBILE FIX (REAL ONE) ===== */
+@media (max-width: 700px) {
+
+  .side-menu {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .side-block {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .side-block-title {
+    display: none;
+  }
+
+  pre.ascii {
+    display: none;
+  }
+
+}
