@@ -1,4 +1,4 @@
-/* ===== GLOBAL STYLE ===== */
+/* ===== GLOBAL ===== */
 
 body {
   margin: 0;
@@ -7,10 +7,11 @@ body {
   color: #111;
 }
 
-/* ===== LAYOUT ===== */
+/* ===== SIDEBAR WIDTH (REAL VALUE) ===== */
+/* your sidebar is ~130px + padding → we use 160 to be safe */
 
 .content {
-  margin-left: 180px;
+  margin-left: 160px;
   padding: 0;
 }
 
@@ -37,19 +38,26 @@ a:hover {
 
 .section {
   padding: 60px 8vw;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .section p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
 }
 
 /* ===== MEDIA ===== */
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .banner {
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto;
 }
 
 .video-wrapper {
@@ -72,7 +80,6 @@ a:hover {
 
   .section {
     padding: 20px;
-    max-width: 100%;
   }
 
   h1 { font-size: 2.2rem; }
