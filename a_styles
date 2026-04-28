@@ -1,25 +1,13 @@
-/* ===== GLOBAL ===== */
+/* ===== ORIGINAL STYLE RESTORED ===== */
 
 body {
   margin: 0;
-  background-color: #d0e8d0;
+  background-color: #b9d0b8; /* your original green */
   font-family: 'Space Grotesk', sans-serif;
   color: #111;
-}
 
-/* ===== SIDEBAR WIDTH (REAL VALUE) ===== */
-/* your sidebar is ~130px + padding → we use 160 to be safe */
-
-.content {
-  margin-left: 160px;
-  padding: 0;
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-  .content {
-    margin-left: 0;
-  }
+  /* IMPORTANT: this is what keeps content away from sidebar */
+  margin-left: 180px;
 }
 
 /* ===== LINKS ===== */
@@ -27,7 +15,6 @@ body {
 a {
   color: inherit;
   text-decoration: underline;
-  transition: color 0.2s ease;
 }
 
 a:hover {
@@ -38,15 +25,15 @@ a:hover {
 
 .section {
   padding: 60px 8vw;
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .section p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
 }
 
-/* ===== MEDIA ===== */
+/* ===== IMAGES ===== */
 
 img {
   max-width: 100%;
@@ -54,11 +41,14 @@ img {
   display: block;
 }
 
+/* banner images (music / skate / main) */
 .banner {
-  width: 100%;
-  max-width: 700px;
+  width: 90%;
+  max-width: 500px;
   margin: 40px auto;
 }
+
+/* ===== VIDEO ===== */
 
 .video-wrapper {
   position: relative;
@@ -74,15 +64,25 @@ img {
   border: none;
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE (iphone fix) ===== */
 
 @media (max-width: 700px) {
 
-  .section {
-    padding: 20px;
+  body {
+    margin-left: 0; /* sidebar becomes top */
   }
 
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.4rem; }
+  .section {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
 
 }
