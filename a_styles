@@ -1,0 +1,102 @@
+/* ===== GLOBAL STYLE ===== */
+
+body {
+  margin: 0;
+  background-color: #d0e8d0;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #111;
+  margin-left: 180px; /* desktop sidebar space */
+}
+
+/* ===== LINKS ===== */
+a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #FF5DA2;
+}
+
+a:visited {
+  color: #FF5DA2;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2 {
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+/* ===== LAYOUT ===== */
+.content {
+  padding: 0;
+}
+
+.section {
+  padding: 60px 8vw;
+  max-width: 600px;
+}
+
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* ===== HEADER IMAGE / BANNER ===== */
+.banner-wrapper {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 40px 0;
+}
+
+.banner {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* ===== VIDEO ===== */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 700px) {
+
+  body {
+    margin-left: 0;
+  }
+
+  .section {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .banner {
+    width: 100%;
+  }
+}
