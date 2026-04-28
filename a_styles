@@ -1,17 +1,17 @@
-/* ===== ORIGINAL STYLE RESTORED ===== */
-
 body {
   margin: 0;
-  background-color: #b9d0b8; /* your original green */
+  margin-left: 130px; /* EXACT sidebar width */
+  background-color: #b9d0b8;
   font-family: 'Space Grotesk', sans-serif;
   color: #111;
-
-  /* IMPORTANT: this is what keeps content away from sidebar */
-  margin-left: 180px;
 }
 
-/* ===== LINKS ===== */
+/* IMPORTANT: no shifting content anymore */
+.content {
+  padding: 0;
+}
 
+/* links */
 a {
   color: inherit;
   text-decoration: underline;
@@ -21,34 +21,22 @@ a:hover {
   color: #FF5DA2;
 }
 
-/* ===== TEXT ===== */
-
+/* text */
 .section {
   padding: 60px 8vw;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .section p {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.6;
 }
 
-/* ===== IMAGES ===== */
-
+/* media */
 img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
-
-/* banner images (music / skate / main) */
-.banner {
-  width: 90%;
-  max-width: 500px;
-  margin: 40px auto;
-}
-
-/* ===== VIDEO ===== */
 
 .video-wrapper {
   position: relative;
@@ -59,30 +47,21 @@ img {
 
 .video-wrapper iframe {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   border: none;
 }
 
-/* ===== MOBILE (iphone fix) ===== */
-
+/* mobile */
 @media (max-width: 700px) {
-
   body {
-    margin-left: 0; /* sidebar becomes top */
+    margin-left: 0;
   }
 
   .section {
     padding: 20px;
-    max-width: 100%;
   }
 
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.4rem; }
 }
