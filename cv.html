@@ -8,114 +8,27 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- SHARED STYLES -->
+<link rel="stylesheet" href="a_styles.css">
+<link rel="stylesheet" href="sidebar.css">
+
 <style>
-body {
-    background: #d0e8d0;
-    color: black;
-    font-family: "Space Grotesk", sans-serif;
-    margin: 0;
-    padding: 40px 60px;
-    max-width: 900px;
-    line-height: 1.5;
-    margin-left: 160px;
-}
-
-.side-menu {
-position: fixed;
-top: 0;
-left: 0;
-height: 100vh;
-width: 150px;
-padding: 40px 15px;
-text-align: center;
-align-items: center;
-background: #c2ddc2;
-display: flex;
-flex-direction: column;
-gap: 30px;
-font-family: 'Alfa Slab One', serif;
-font-size: 1.1rem;
-border-right: 1px solid rgba(0,0,0,0.1);
-}
-
-.side-block {
-display: flex;
-flex-direction: column;
-gap: 6px;
-}
-
-.side-block-title {
-font-size: 0.7rem;
-text-transform: uppercase;
-opacity: 0.7;
-}
-
-.side-menu a {
-text-decoration: none;
-color: #111;
-font-size: 0.85rem;
-line-height: 1.2;
-}
-
-pre.ascii {
-font-family: monospace;
-font-size: 0.7rem;
-line-height: 1;
-margin: 0;
-}
-
-h1, h2 {
-font-family: "Roboto Slab", serif;
-font-weight: 400;
-margin-top: 50px;
-margin-bottom: 15px;
-}
-
-h1 { font-size: 42px; }
-h2 { font-size: 26px; }
-
-p, li {
-font-size: 18px;
-margin-bottom: 6px;
-}
-
-ul {
-margin: 0 0 20px 0;
-padding-left: 20px;
-}
-
-.section {
-margin-bottom: 40px;
-}
+/* keeping ONLY your local overrides */
 </style>
+
 </head>
 
 <body>
 
-<nav class="side-menu">
-<div class="side-block">
-<div class="side-block-title">--</div>
-<a href="about.html">about</a>
-<a href="cv.html">CV</a>
-<a href="https://scholar.google.com/citations?user=dE6I0SsAAAAJ&hl=en&oi=ao">publications</a>
-<a href="teaching.html">teaching</a>
-</div>
-
-<div class="side-block">
-<div class="side-block-title">
-<pre class="ascii">
- _   ,_,   _
- / `'=) (='` \
- /.-.-.\ /.-.-.\
- `      "      `
-</pre>
-</div>
-<a href="skateboarding.html">skateboarding</a>
-<a href="music.html">music</a>
-<div class="side-block-title">--</div>
-<a href="index.html">main</a>
-</div>
-</nav>
+<!-- SIDEBAR (FIXED) -->
+<div id="sidebar"></div>
+<script>
+  fetch("sidebar.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("sidebar").innerHTML = html;
+    });
+</script>
 
 <div class="section">
 <h2>Education</h2>
@@ -159,11 +72,11 @@ margin-bottom: 40px;
 </ul>
 
 <p>Candidature essay: Use of morphological, molecular and niche characters in evolutionary studies and their integration for phylogenetic inferences and species delimitation in bats</p>
-<p>Thesis: Diversification of Glossophaga soricina in Mesoamerica.</p>
+<p>Thesis: Diversification of <em>Glossophaga soricina</em> in Mesoamerica.</p>
 
 <p>Master Researcher (2013 – 2015)</p>
 <ul>
-<li>Evolution of plant defense traits (trichomes and tropane alkaloids) in Datura stramonium across native and introduced ranges. Found plants that have evolved free of specialized herbivores invest up to ten times less in defense traits.</li>
+<li>Evolution of plant defense traits (trichomes and tropane alkaloids) in <em>Datura stramonium</em> across native and introduced ranges. Found plants that have evolved free of specialized herbivores invest up to ten times less in defense traits.</li>
 </ul>
 
 <p>Thesis: Adaptive evolution during the invasion of novel environments: changes in anti-herbivore in Datura stramonium.</p>
@@ -178,107 +91,31 @@ margin-bottom: 40px;
 <div class="section">
 <h2>Publications</h2>
 
-<p>Citations: 112; H-index:4; i10-index:3 (as of April, 2026) Publications: 7 | 4 first authorships</p>
-<p>* corresponding author; + shared first authorship</p>
+<p><em>Citations: 112; H-index: 4; i10-index: 3 (as of April, 2026) Publications: 7 | 4 first authorships</em></p>
+<p><em>* corresponding author; + shared first authorship</em></p>
 
-<p>In revision:</p>
+<p><strong>In revision:</strong></p>
 <ul>
-<li>Extreme Diversifications and Convergences in Skull Shapes of Domestic Dogs and Phyllostomid Bats. Calahorra-Oliart, A., Kane, A., Hutagalung A., Yohe, L. R. In revision.</li>
+<li>Natural versus artificial selection generate distinct cranial diversification pathways in bats and domestic dogs. <strong>Calahorra-Oliart, A.</strong>, Kane, A., Hutagalung A., Yohe, L. R. In revision.</li>
 </ul>
 
-<p>Published</p>
-<ul>
-<li>[6] Terbot, J. W.+, Calahorra-Oliart, A.+, Soni, V., Versoza, C. J., Milhaven, M., Shah, D., ... & Jensen, J. D. 2025. Re‐evaluating the demographic history of, and inferring the fine‐scale recombination landscape for, wild Chinese Rhesus Macaques (Macaca mulatta). American Journal of Primatology 87: e70088. DOI: https://doi.org/10.1002/ajp.70088</li>
-<li>[5] Terbot, J. W., Soni, V., Versoza, C. J., Milhaven, M., Calahorra-Oliart, A., Shah, D., ... & Jensen, J. D. 2025. Interpreting patterns of X chromosomal relative to autosomal diversity in aye-ayes (Daubentonia madagascariensis). American Journal of Primatology 87: e7009. DOI: https://doi.org/10.1002/ajp.70091</li>
-<li>[4] Calahorra-Oliart, A.*, Lira-Noriega, A., and León-Paniagua, L. 2023. Cranial morphological patterns are independent from abiotic ecological requirements in neotropical Glossophaginae bat species. Acta Chiropterologica 24: 437-452. DOI: https://doi.org/10.3161/15081109ACC2022.24.2.012</li>
-<li>[3] Calahorra-Oliart, A., Ospina-Garcés S.M., and León-Paniagua, L*. 2021. Cryptic species in Glossophaga soricina (Chiroptera: Phyllostomidae): do morphological data support molecular evidence? Journal of Mammalogy 102: 54-68. DOI: https://doi.org/10.1093/jmammal/gyaa116</li>
-<li>[2] Castillo, G.+, Calahorra-Oliart, A.+, Núñez-Farfán, J., Valverde, P. L., Arroyo, J., Cruz, L. L., and Tapia-López, R. 2019. Selection on tropane alkaloids in native and non-native populations of Datura stramonium. Ecology and Evolution 9: 10176-10184. DOI: https://doi.org/10.1002/ece3.5520</li>
-<li>[1] Natural selection on plant resistance to herbivores in the native and introduced range. Valverde, P. L., Arroyo, J., Núñez-Farfán, J., Castillo, G., Calahorra, A., Pérez-Barrales, R., and Tapia-López, R. 2015. Natural selection on plant resistance to herbivores in the native and introduced range. AoB Plants 7: plv090. DOI: https://doi.org/10.1093/aobpla/plv090</li>
+<p><strong>Published</strong></p>
+<ul style="list-style: none; padding-left: 0;">
+
+<li>[6] Terbot, J. W.+, <strong>Calahorra-Oliart, A.+</strong>, Soni, V., Versoza, C. J., Milhaven, M., Shah, D., ... & Jensen, J. D. 2025. Re‐evaluating the demographic history of, and inferring the fine‐scale recombination landscape for, wild Chinese Rhesus Macaques (Macaca mulatta). American Journal of Primatology 87: e70088. DOI: <a href="https://doi.org/10.1002/ajp.70088" target="_blank">https://doi.org/10.1002/ajp.70088</a></li>
+
+<li>[5] Terbot, J. W., Soni, V., Versoza, C. J., Milhaven, M., <strong>Calahorra-Oliart, A.</strong>, Shah, D., ... & Jensen, J. D. 2025. Interpreting patterns of X chromosomal relative to autosomal diversity in aye-ayes (Daubentonia madagascariensis). American Journal of Primatology 87: e7009. DOI: <a href="https://doi.org/10.1002/ajp.70091" target="_blank">https://doi.org/10.1002/ajp.70091</a></li>
+
+<li>[4] <strong>Calahorra-Oliart, A.*</strong>, Lira-Noriega, A., and León-Paniagua, L. 2023. Cranial morphological patterns are independent from abiotic ecological requirements in neotropical Glossophaginae bat species. Acta Chiropterologica 24: 437-452. DOI: <a href="https://doi.org/10.3161/15081109ACC2022.24.2.012" target="_blank">https://doi.org/10.3161/15081109ACC2022.24.2.012</a></li>
+
+<li>[3] <strong>Calahorra-Oliart, A.</strong>, Ospina-Garcés S.M., and León-Paniagua, L*. 2021. Cryptic species in Glossophaga soricina (Chiroptera: Phyllostomidae): do morphological data support molecular evidence? Journal of Mammalogy 102: 54-68. DOI: <a href="https://doi.org/10.1093/jmammal/gyaa116" target="_blank">https://doi.org/10.1093/jmammal/gyaa116</a></li>
+
+<li>[2] Castillo, G.+, <strong>Calahorra-Oliart, A.+</strong>, Núñez-Farfán, J., Valverde, P. L., Arroyo, J., Cruz, L. L., and Tapia-López, R. 2019. Selection on tropane alkaloids in native and non-native populations of Datura stramonium. Ecology and Evolution 9: 10176-10184. DOI: <a href="https://doi.org/10.1002/ece3.5520" target="_blank">https://doi.org/10.1002/ece3.5520</a></li>
+
+<li>[1] Natural selection on plant resistance to herbivores in the native and introduced range. Valverde, P. L., Arroyo, J., Núñez-Farfán, J., Castillo, G., <strong>Calahorra, A.</strong>, Pérez-Barrales, R., and Tapia-López, R. 2015. Natural selection on plant resistance to herbivores in the native and introduced range. AoB Plants 7: plv090. DOI: <a href="https://doi.org/10.1093/aobpla/plv090" target="_blank">https://doi.org/10.1093/aobpla/plv090</a></li>
+
 </ul>
 
-</div>
-
-<div class="section">
-<h2>SciComm</h2>
-<ul>
-<li>Biology, evolution, Darwin and more with Adriana Calahorra. Curioso Podcast, 2025.</li>
-<li>Reality or fiction? the Jurassic park-style resurrection of the dire wolf. Curioso Podcast, 2025.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Other Publications</h2>
-<ul>
-<li>Someone you should know… Dolores Skateboarding Magazine, 2022.</li>
-<li>Dear Streets Diary. Dolores Skateboarding Magazine, 2022.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Research Fellowships</h2>
-<ul>
-<li>May 15 – June 2, 2024 – Yale University Peabody Museum (YPM). Data gathering. µCT scanning. Microscope imaging.</li>
-<li>April 6 – 29, 2024 – Allen-Vercoe Lab. University of Guelph, Canada. Training on building and sampling a bioreactor for gut microbiome analyses.</li>
-<li>October 24 – November-13, 2017 – American Museum of Natural History (AMNH), New York, USA. Data gathering.</li>
-<li>October 5 – 21, 2017 – National Museum of Natural History (NMNH), Washington D. C., USA. Data gathering.</li>
-<li>August 1 – October 30, 2014 – Universidad de Sevilla. Research visit. Project “Hercogamy in Datura stramonium”.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Teaching Experience</h2>
-<ul>
-<li>2025 – Theoretical-practical workshop on geometric morphometrics applied to bats. Workshop developer and instructor. Murcisemana Oficial. Mexico.</li>
-<li>2025 – International Virtual Science Workshop for Youth. Workshop developer and instructor. UNAM. Mexico.</li>
-<li>2023 – 2024 – Master’s students mentoring. Department of Bioinformatics and Genomics, UNC Charlotte.</li>
-<li>2020 – 2023 – Private statistics and science tutoring. Spain.</li>
-<li>2021 – Workshop "Scientific knowledge availability and open access to codes and research data". Lab (R studio) instructor. Universidad Adolfo Ibáñez. Chile.</li>
-<li>2021 – Population genetics applied to wildlife management. Workshop developer and instructor. International Latin-American workshop. Academia Científica. Chile.</li>
-<li>2016 – 2017 – Course for admission to graduate school. Evolution teacher. Biological Sciences Postgraduate Program, UNAM. Mexico.</li>
-<li>2016 – 2017 – Course for admission to graduate school. Ecology teacher. Biological Sciences Postgraduate Program, UNAM. Mexico.</li>
-<li>2012 – Implementation of the model “Fundamental concepts of Evolutionary Biology: a didactic proposal for high school”. Escuela Secundaria Técnica No. 1 “Miguel Lerdo de Tejada”. Mexico.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Conferences and Talks</h2>
-<ul>
-<li>March 2026. Dogs, bats, and morphospaces as information landscapes. Institutional seminar. INECOL. Veracruz, Mexico.</li>
-<li>October 2025. Geometric morphometrics as a key tool in bat studies. Invited talk. Zoology Museum “Alfonso L. Herrera”, UNAM. Mexico City, Mexico.</li>
-<li>October 2024. Extreme diversifications and convergences in skull shapes of domestic dogs and phyllostomid bats. Conference presentation. 52nd Annual Symposium North American Society for Bat Research. Jalisco, Mexico.</li>
-<li>June 2024. Morphological evolution in domestic dogs and phyllostomid bats. Flash talk. 1st Postdoctoral Symposium. North Carolina, USA.</li>
-<li>October 2021. Resolving a cryptic species complex with integrative taxonomy: the case of Glossophaga soricina. Invited talk. Murcisemana Oficial. Online.</li>
-<li>December 2019. Geometric morphometrics and its use for vertebrate studies. Invited talk. 1st symposium of vertebrates of México, FES Zaragoza, UNAM. Mexico City, Mexico.</li>
-<li>October 2018. Morphological and ecological differentiation in Glossophaga soricina. Conference presentation. 48th Annual Symposium North American Society for Bat Research. Jalisco, Mexico.</li>
-<li>April 2015. Adaptive evolution during invasion of novel environments: changes in anti-herbivore defense in Datura stramonium. Poster. V Congreso Mexicano de Ecología. San Luis Potosí, Mexico.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Volunteering and Community Service</h2>
-<ul>
-<li>June 2021 - Polling Station Chair (Precinct President), National Electoral Institute (INE), Mexico.</li>
-<li>July 18-22, 2016 – Drum teacher and Band Coach, Girls Rock Camp Alliance (Austin). Texas, USA.</li>
-<li>August 1-5, 2016 – Drum teacher and Band Coach, Girls Rock Camp Alliance (Austin). Texas, USA.</li>
-<li>June 7-11, 2017 – Drum teacher and Band Coach, Girls Rock Camp Alliance (Austin). Texas, USA.</li>
-<li>July 24-28, 2017 – Drum teacher and Band Coach, Girls Rock Camp Alliance (Austin). Texas, USA.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Attended workshops and courses</h2>
-<ul>
-<li>2024 – AED/CPR/First Aid training. NCRC, UNC.</li>
-<li>2023/2024 – Animal Biosafety, Export Control Training & UFI, Laboratory Personnel BSS, Shipping and transport of regulated biological materials, USDA Permits, Working with Animals in biomedical research - Refresher Course, Working with the IACUC. CITI Program, UNC.</li>
-<li>2023 – Grant Writing Workshop. Sarah Dobson & Co. USA.</li>
-<li>2020 – Phylogenetic Systematics. Biology Institute, UNAM. Mexico.</li>
-<li>2020 – Science and Gender: sex, brain and materialized experience. CIICH, UNAM. Mexico</li>
-<li>2018 – Studying evolution with geometric morphometrics. Transmitting Science. Creta, Greece.</li>
-<li>2017 – Next Generation Sequencing. Instituto de Ecología, UNAM. Mexico</li>
-<li>2016 – Geometric morphometrics and its application to the study of biological shapes. CIByC, UAEM. Mexico.</li>
-<li>2015 – Academic Writing. Posgrado UNAM. Mexico</li>
-<li>2012 – Writing for scientific divulgation. Facultad de Química, UNAM. Mexico.</li>
-</ul>
 </div>
 
 </body>
