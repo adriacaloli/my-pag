@@ -2,144 +2,54 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – Adriana Calahorra-Oliart</title>
+<title>About – Adriana Calahorra-Oliart</title>
 
-  <!-- MATCHING FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- SIDEBAR CSS -->
-  <link rel="stylesheet" href="sidebar.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      background-color: #d0e8d0;
-      font-family: 'Space Grotesk', sans-serif;
-      color: #111;
-      margin-left: 180px; /* space for sidebar */
-    }
+<!-- STYLES -->
+<link rel="stylesheet" href="a_styles.css">
+<link rel="stylesheet" href="sidebar.css">
 
-    .content {
-      padding: 60px 8vw;
-      max-width: 600px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin: 0 0 20px 0;
-      font-weight: 600;
-      letter-spacing: -1px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.55;
-    }
-
-    .content a:visited {
-      color: #FF5DA2; /* bubblegum pink for visited */
-    }
-/* ====== MOBILE FIXES ====== */
-@media (max-width: 700px) {
-
-  body {
-    margin-left: 0; /* remove big sidebar gap */
-  }
-
-  /* Sidebar becomes a top bar */
-  .side-menu {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 20px 0;
-    border-right: none;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .side-block {
-    flex-direction: row;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .side-block-title {
-    display: none; /* too cramped on mobile */
-  }
-
-  pre.ascii {
-    display: none; /* the bat would break the layout */
-  }
-
-  /* Content takes full width */
-  .content {
-    width: 100%;
-    padding: 20px;
-  }
-
-  /* Banner and images scale properly */
-  .banner,
-  .photo-vertical img {
-    max-width: 100%;
-    width: 100%;
-    margin: 20px 0;
-  }
-
-  /* Text readable on mobile */
-  .section {
-    padding: 20px;
-    max-width: 100%;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-}
-
-  </style>
 </head>
 
 <body>
 
-  <!-- LOAD SIDEBAR -->
-  <div id="sidebar"></div>
-  <script>
-    fetch("sidebar.html")
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById("sidebar").innerHTML = html;
-      });
-  </script>
+<!-- SIDEBAR -->
+<div id="sidebar"></div>
 
-  <!-- MAIN CONTENT -->
-  <div class="content">
+<script>
+fetch("sidebar.html")
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("sidebar").innerHTML = html;
+  });
+</script>
 
-    <h1>About</h1>
+<!-- CONTENT -->
+<div class="content">
 
-    <p>
-      Mexico City, 1988. I did my undergraduate and graduate studies (bachelor, master's, and doctorate) at UNAM in Mexico. 
-    </p>
+  <h1>About</h1>
 
-    <p>
-    I chose Evolutionary Biology not only because it’s the backbone of explaining the history of life, 
-      but also because i firmly believe that  the correct understanding (and explaining) of evolution allows 
-      us to make more informed decisions on everyday life stuff, and procure social justice. You can talk about it more here. 
-    </p>
+  <p>
+    Mexico City, 1988. I did my undergraduate and graduate studies (bachelor, master's, and doctorate) at UNAM in Mexico.
+  </p>
 
-  </div>
+  <p>
+    I chose Evolutionary Biology not only because it’s the backbone of explaining the history of life,
+    but also because I firmly believe that the correct understanding (and explaining) of evolution allows
+    us to make more informed decisions on everyday life stuff, and procure social justice. You can talk about it more here.
+  </p>
+
+</div>
 
 </body>
 </html>
