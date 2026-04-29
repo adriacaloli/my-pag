@@ -1,12 +1,11 @@
 /* ===== BASE ===== */
 body {
   margin: 0;
-  margin-left: 130px; /* matches sidebar */
-  background-color: #b9d0b8;
+  margin-left: 130px;
+  background-color: #d0e8d0; /* YOUR LIGHT GREEN */
   font-family: 'Inter', sans-serif;
   color: #111;
 }
-
 /* MAIN CONTENT */
 .content {
   padding: 80px 8vw;
