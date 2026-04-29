@@ -12,12 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
-  <!-- SHARED STYLES -->
+  <!-- SHARED -->
   <link rel="stylesheet" href="a_styles.css">
   <link rel="stylesheet" href="sidebar.css">
 
   <style>
-    /* ===== SAME BASE AS WORKING PAGES ===== */
+    /* ===== BASE (same as your good pages) ===== */
     body {
       margin: 0;
       background-color: #d0e8d0;
@@ -30,26 +30,41 @@
       padding: 60px 8vw;
     }
 
-    /* ===== HERO IMAGE (Panna style) ===== */
-  .banner {
-  width: 100%;
-  max-width: 500px;   /* ↓ smaller */
-  height: 65vh;       /* ↓ controls vertical size */
-  object-fit: cover;  /* crops nicely instead of shrinking */
-  display: block;
-  margin: 0 auto 40px auto;
-  border-radius: 12px;
-}
-    /* ===== TEXT BLOCK ===== */
-    .section {
-      max-width: 750px;
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto 60px auto;
     }
 
-    h1 {
-      margin-top: 0;
-      font-size: 2.4rem;
-      font-weight: 600;
+    .hero img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 20px;
+      left: 25px;
+      color: white;
+      background: rgba(0,0,0,0.35);
+      padding: 12px 18px;
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-text h1 {
+      margin: 0;
+      font-size: 2rem;
       letter-spacing: -1px;
+    }
+
+    /* ===== CONTENT ===== */
+    .section {
+      max-width: 700px;
     }
 
     p {
@@ -65,11 +80,11 @@
       font-weight: 600;
     }
 
-    /* ===== VIDEO (clean centered blocks) ===== */
+    /* ===== VIDEO ===== */
     .video-wrapper {
       position: relative;
       width: 100%;
-      max-width: 750px;
+      max-width: 700px;
       margin: 20px 0 50px 0;
       padding-top: 56.25%;
     }
@@ -95,12 +110,17 @@
         padding: 20px;
       }
 
-      .banner {
-        margin-bottom: 30px;
+      .hero img {
+        height: 40vh;
       }
 
-      h1 {
-        font-size: 2rem;
+      .hero-text {
+        left: 15px;
+        bottom: 15px;
+      }
+
+      .hero-text h1 {
+        font-size: 1.5rem;
       }
 
       h2 {
@@ -111,7 +131,6 @@
       .video-wrapper {
         margin-bottom: 30px;
       }
-
     }
 
   </style>
@@ -132,13 +151,16 @@
   <!-- CONTENT -->
   <div class="content">
 
-    <!-- IMAGE -->
-    <img src="skatephoto_r.jpg" class="banner">
+    <!-- HERO -->
+    <div class="hero">
+      <img src="skatephoto_r.jpg">
+      <div class="hero-text">
+        <h1>Skateboarding</h1>
+      </div>
+    </div>
 
     <!-- TEXT -->
     <div class="section">
-
-      <h1>Skateboarding</h1>
 
       <p>I've been skateboarding since 2003.</p>
 
