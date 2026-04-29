@@ -13,12 +13,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
 
-  <!-- SHARED -->
+  <!-- SHARED STYLES -->
   <link rel="stylesheet" href="a_styles.css">
+
+  <!-- SIDEBAR -->
   <link rel="stylesheet" href="sidebar.css">
 
   <style>
-    /* ===== BASE (same as your working pages) ===== */
+    /* Only page-specific things */
+
     body {
       margin: 0;
       background-color: #d0e8d0;
@@ -31,62 +34,48 @@
       padding: 60px 8vw;
     }
 
-    /* ===== HERO ===== */
-    .hero {
-      position: relative;
-      max-width: 1000px;
-      margin: 0 auto 60px auto;
-    }
-
-    .hero img {
+    /* FIXED IMAGE (no overlay, correct crop) */
+    .banner {
       width: 100%;
+      max-width: 1000px;
       height: 55vh;
       object-fit: cover;
-      border-radius: 12px;
+      object-position: center 20%; /* 👈 keeps your head */
       display: block;
+      margin: 0 0 40px 0;
+      border-radius: 12px;
     }
 
-    .hero-text {
-      position: absolute;
-      bottom: 20px;
-      left: 25px;
-      color: white;
-      background: rgba(0,0,0,0.35);
-      padding: 12px 18px;
-      border-radius: 8px;
-      backdrop-filter: blur(4px);
-    }
-
-    .hero-text h1 {
-      margin: 0;
-      font-size: 2rem;
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      margin-top: 0;
+      font-weight: 600;
       letter-spacing: -1px;
     }
 
-    /* ===== CONTENT ===== */
-    .section {
-      max-width: 700px;
+    h2 {
+      margin-top: 40px;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
 
     p {
       font-size: 1.1rem;
       line-height: 1.6;
-      margin-bottom: 20px;
+      max-width: 700px;
     }
 
-    h2 {
-      margin-top: 50px;
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-      font-weight: 600;
+    .section {
+      max-width: 700px;
     }
 
-    /* ===== VIDEO ===== */
+    /* VIDEO */
     .video-wrapper {
       position: relative;
       width: 100%;
       max-width: 700px;
-      margin: 20px 0 50px 0;
+      margin: 20px 0 40px 0;
       padding-top: 56.25%;
     }
 
@@ -97,10 +86,10 @@
       width: 100%;
       height: 100%;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
     }
 
-    /* ===== MOBILE ===== */
+    /* MOBILE */
     @media (max-width: 700px) {
 
       body {
@@ -111,26 +100,16 @@
         padding: 20px;
       }
 
-      .hero img {
+      .banner {
         height: 40vh;
       }
 
-      .hero-text {
-        left: 15px;
-        bottom: 15px;
-      }
-
-      .hero-text h1 {
-        font-size: 1.5rem;
+      h1 {
+        font-size: 2rem;
       }
 
       h2 {
         font-size: 1.2rem;
-        margin-top: 30px;
-      }
-
-      .video-wrapper {
-        margin-bottom: 30px;
       }
 
     }
@@ -154,16 +133,12 @@
   <!-- CONTENT -->
   <div class="content">
 
-    <!-- HERO -->
-    <div class="hero">
-      <img src="music-banner.jpg">
-      <div class="hero-text">
-        <h1>Music</h1>
-      </div>
-    </div>
+    <!-- IMAGE -->
+    <img src="music-banner.jpg" class="banner">
 
-    <!-- TEXT -->
     <section class="section">
+
+      <h1>Music</h1>
 
       <p>
         Some years ago, I had a band with which I made very beautiful music. 
