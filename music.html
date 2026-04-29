@@ -35,16 +35,14 @@
     }
 
     /* FIXED IMAGE (no overlay, correct crop) */
-    .banner {
-      width: 100%;
-      max-width: 1000px;
-      height: 55vh;
-      object-fit: cover;
-      object-position: center 20%; /* 👈 keeps your head */
-      display: block;
-      margin: 0 0 40px 0;
-      border-radius: 12px;
-    }
+.banner {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;          /* ← this is the key */
+  display: block;
+  margin: 0 0 40px 0;
+  border-radius: 12px;
+}
 
     h1 {
       font-size: 2.2rem;
