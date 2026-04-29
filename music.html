@@ -1,173 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music – Adriana Calahorra-Oliart</title>
+<title>Music – Adriana Calahorra-Oliart</title>
 
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
-  <!-- SHARED STYLES -->
-  <link rel="stylesheet" href="a_styles.css">
+<!-- SHARED STYLES -->
+<link rel="stylesheet" href="a_styles.css">
+<link rel="stylesheet" href="sidebar.css">
 
-  <!-- SIDEBAR -->
-  <link rel="stylesheet" href="sidebar.css">
-
-  <style>
-    /* Only page-specific things */
-
-    body {
-      margin: 0;
-      background-color: #d0e8d0;
-      font-family: 'Space Grotesk', sans-serif;
-      color: #111;
-      margin-left: 180px;
-    }
-
-    .content {
-      padding: 60px 8vw;
-    }
-
-    /* FIXED IMAGE (no overlay, correct crop) */
-.banner {
-  width: 100%;
-  max-width: 500px;
-  height: auto;          /* ← this is the key */
-  display: block;
-  margin: 10 0 50px 0;
-  border-radius: 0px;
+<style>
+body {
+  margin: 0;
+  background-color: #d0e8d0;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #111;
+  margin-left: 180px;
 }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      margin-top: 0;
-      font-weight: 600;
-      letter-spacing: -1px;
-    }
+/* MAIN CONTENT */
+.content {
+  padding: 60px 8vw;
+  max-width: 900px;   /* controls overall layout */
+}
 
-    h2 {
-      margin-top: 40px;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
+/* IMAGE */
+.banner {
+  width: 100%;
+  max-width: 560px;   /* SAME WIDTH AS TEXT BLOCK */
+  height: auto;
+  display: block;
+  margin: 10px 0 50px 0; /* fixed invalid margin */
+}
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 700px;
-    }
+/* TEXT BLOCK */
+.section {
+  max-width: 560px;   /* match image width → aligns edges */
+  margin-left: 0;
+  text-align: left;   /* remove right alignment drift */
+}
 
-    .section {
-      max-width: 700px;
-        margin-left: 0;       /* anchor to left */
-  text-align: right;    /* ← your atypical choice */
-    }
+/* TYPOGRAPHY */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
 
-    /* VIDEO */
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 700px;
-      margin: 20px 0 40px 0;
-      padding-top: 56.25%;
-    }
+h2 {
+  margin-top: 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
 
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 8px;
-    }
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
 
-    /* MOBILE */
-    @media (max-width: 700px) {
+/* VIDEO */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 20px 0 40px 0;
+  padding-top: 56.25%;
+}
 
-      body {
-        margin-left: 0;
-      }
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
 
-      .content {
-        padding: 20px;
-      }
+/* MOBILE */
+@media (max-width: 700px) {
+  body {
+    margin-left: 0;
+  }
 
-      .banner {
-        height: 40vh;
-      }
+  .content {
+    padding: 20px;
+  }
 
-      h1 {
-        font-size: 2rem;
-      }
+  .banner,
+  .section {
+    max-width: 100%;
+  }
 
-      h2 {
-        font-size: 1.2rem;
-      }
+  h1 {
+    font-size: 2rem;
+  }
 
-    }
-
-  </style>
-
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- SIDEBAR -->
-  <div id="sidebar"></div>
-  <script>
-    fetch("sidebar.html")
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById("sidebar").innerHTML = html;
-      });
-  </script>
+<!-- SIDEBAR -->
+<div id="sidebar"></div>
 
-  <!-- CONTENT -->
-  <div class="content">
+<script>
+fetch("sidebar.html")
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("sidebar").innerHTML = html;
+  });
+</script>
 
-    <!-- IMAGE -->
-    <img src="music-banner.jpg" class="banner">
+<!-- CONTENT -->
+<div class="content">
 
-    <section class="section">
+  <!-- IMAGE -->
+  <img src="music-banner.jpg" class="banner">
 
-      <h1>Music</h1>
+  <section class="section">
+    <h1></h1>
+    <p>
+    Some years ago, I had a band with which I made very beautiful music. I was the lead singer and the drummer.<br>
+    It was described as <a href="https://www.youtube.com/watch?v=Ss9e0IvTnRA&list=RDSs9e0IvTnRA&start_radio=1" target="_blank">“the most saccharine set of pop-punk tunes to ever grace my ears in such a long time”</a> by <a href="https://www.youtube.com/@jimmythedog." target="_blank">Jimmy</a>, as “simple punk with melodic leads and a sorta snotty woman singer” by <a href="https://www.discogs.com/release/9334803-Olvido-Demo" target="_blank">Richter Scale Records</a>, as “Punk with popish melodies to tap your feet to” by <a href="https://www.maximumrocknroll.com/" target="_blank">Maximum Rocknroll</a> and as “música borrosa” by <a href="https://ru.dgb.unam.mx/bitstreams/90828a4a-7c35-413f-ad63-b211bbf565dd/download" target="_blank">Yire</a>. You can listen to it <a href="https://olvido1988.bandcamp.com" target="_blank">here</a>. I’d be very happy to find the time and the people to play music again.
+    <br><br>
+    Sometimes, I DJ in my free time. I like high energy music.<br>
+    These are some of my mixes. You can listen to more in my <a href="https://soundcloud.com/adrianarchy" target="_blank">Soundcloud</a>.
+    </p>
 
-      <p>
-        Some years ago, I had a band with which I made very beautiful music. 
-        I was the lead singer and the drummer.<br>
-        It was described as <a href="https://www.youtube.com/watch?v=Ss9e0IvTnRA&list=RDSs9e0IvTnRA&start_radio=1" target="_blank">“the most saccharine set of pop-punk tunes to ever grace my ears in such a long time”</a> by <a href="https://www.youtube.com/@jimmythedog." target="_blank">Jimmy</a>,
-        as “simple punk with melodic leads and a sorta snotty woman singer” by <a href="https://www.discogs.com/release/9334803-Olvido-Demo" target="_blank">Richter Scale Records</a>, 
-        as “Punk with popish melodies to tap your feet to” by <a href="https://www.maximumrocknroll.com/" target="_blank">Maximum Rocknroll</a> and as “música borrosa” by <a href="https://ru.dgb.unam.mx/bitstreams/90828a4a-7c35-413f-ad63-b211bbf565dd/download" target="_blank">Yire</a>. 
-        You can listen to it <a href="https://olvido1988.bandcamp.com" target="_blank">here</a>. 
-        I’d be very happy to find the time and the people to play music again. 
-        <br><br>
-        Sometimes, I DJ in my free time. I like high energy music.<br>
-        These are some of my mixes. You can listen to more in my <a href="https://soundcloud.com/adrianarchy" target="_blank">Soundcloud</a>.
-      </p>
+    <h2>Beach party mix</h2>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube-nocookie.com/embed/jX5iJu_lduU" allowfullscreen></iframe>
+    </div>
 
-      <h2>Beach party mix</h2>
+    <h2>Bedroom mix</h2>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube-nocookie.com/embed/_cVQ3_oxvQg" allowfullscreen></iframe>
+    </div>
 
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/jX5iJu_lduU" allowfullscreen></iframe>
-      </div>
+  </section>
 
-      <h2>Bedroom mix</h2>
-
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/_cVQ3_oxvQg" allowfullscreen></iframe>
-      </div>
-
-    </section>
-
-  </div>
+</div>
 
 </body>
 </html>
