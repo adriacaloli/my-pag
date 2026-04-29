@@ -31,14 +31,15 @@
     }
 
     /* ===== HERO IMAGE (Panna style) ===== */
-    .banner {
-      width: 100%;
-      max-width: 1100px;
-      display: block;
-      margin: 0 auto 50px auto;
-      border-radius: 12px;
-    }
-
+  .banner {
+  width: 100%;
+  max-width: 900px;   /* ↓ smaller */
+  height: 65vh;       /* ↓ controls vertical size */
+  object-fit: cover;  /* crops nicely instead of shrinking */
+  display: block;
+  margin: 0 auto 40px auto;
+  border-radius: 12px;
+}
     /* ===== TEXT BLOCK ===== */
     .section {
       max-width: 750px;
