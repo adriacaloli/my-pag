@@ -21,7 +21,7 @@
   color: #111;
   font-size: 0.85rem;
   line-height: 1.2;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .side-menu a:hover {
@@ -48,7 +48,7 @@ pre.ascii {
   padding: 0;
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE (CONTROLLED LAYOUT) ===== */
 @media (max-width: 700px) {
 
   .side-menu {
@@ -57,32 +57,48 @@ pre.ascii {
     height: auto;
     border-right: none;
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
     padding: 15px;
+    display: flex;
+    flex-direction: column;   /* ← KEY: stack blocks */
+    align-items: center;
+    gap: 12px;
   }
 
-  .side-block {
+  /* FIRST GROUP: about CV publications */
+  .side-block:first-of-type {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  /* REMOVE teaching ONLY on mobile */
+  .side-block:first-of-type a:nth-child(4) {
+    display: none;
+  }
+
+  /* BAT centered on its own line */
+  pre.ascii {
+    display: block;
+    font-size: 0.55rem;
+    line-height: 1;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  /* SECOND GROUP: skate + music */
+  .side-block:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  /* LAST: main */
+  .side-block:last-of-type {
+    display: block;
   }
 
   .side-block-title {
     display: none;
-  }
-
-  pre.ascii {
-    display: block;
-    flex-basis: 100%;
-    font-size: 0.5rem;
-    line-height: 1;
-    text-align: center;
-    margin-top: 10px;
   }
 
 }
