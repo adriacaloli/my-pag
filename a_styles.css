@@ -12,7 +12,10 @@ body {
   max-width: 600px;
   text-align: right; /* desktop right-aligned */
 }
-
+.media-block {
+  max-width: 650px;   /* same as your content width */
+  width: 100%;
+}
 /* LINKS */
 a {
   color: inherit;
