@@ -1,71 +1,69 @@
 /* ===== BASE ===== */
+
 body {
   margin: 0;
-  margin-left: 130px; /* sidebar space */
-  background-color: #d0e8d0;
-  font-family: 'Inter', sans-serif;
+  margin-left: 130px; /* EXACT sidebar width */
+  background-color: #d0e8d0; /* your correct light green */
+  font-family: 'Inter', 'Space Grotesk', sans-serif;
   color: #111;
-  overflow-x: hidden;
 }
 
-/* ===== CONTENT ===== */
+/* ===== CONTENT LAYOUT (ONE SYSTEM FOR ALL PAGES) ===== */
+
 .content {
-  width: 100%;
-  max-width: 650px;
-  padding: 60px 8vw;
-  margin-left: 0; /* ← anchors content to sidebar */
-  box-sizing: border-box;
-
-  text-align: right;
+  padding: 60px 6vw;
 }
 
-/* ===== TYPOGRAPHY ===== */
-h1, h2 {
-  font-family: 'Space Grotesk', sans-serif;
+.section {
+  max-width: 900px;     /* FIX: no more narrow pages */
+  text-align: left;     /* FIX: no forced centering */
 }
 
+/* Titles centered, text not */
 h1 {
-  font-size: 3rem;
-  margin: 0 0 20px 0;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  text-align: center;
   font-weight: 600;
   letter-spacing: -1px;
 }
 
-p {
-  font-size: 1.1rem;
+h2 {
+  margin-top: 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Text */
+p, li {
+  font-size: 1.05rem;
   line-height: 1.6;
 }
 
-/* ===== LINKS ===== */
+/* Links */
 a {
   color: inherit;
   text-decoration: underline;
 }
 
-a:hover,
-a:active,
-a:focus {
-  color: #FF5DA2;
+a:hover {
+  color: #ff82b4; /* your correct pink */
 }
 
-/* ===== MEDIA (images + video aligned properly) ===== */
-.media {
-  width: 100%;
-  max-width: 650px;
-  display: block;
-  margin: 0; /* ← prevents drifting */
-}
+/* ===== MEDIA (ALIGNED WITH TEXT) ===== */
 
 img {
   width: 100%;
-  height: auto;
+  max-width: 900px;
   display: block;
+  border-radius: 8px;
 }
 
+/* VIDEO */
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 650px;
+  max-width: 900px;
   padding-top: 56.25%;
   margin: 20px 0 40px;
 }
@@ -79,7 +77,22 @@ img {
   border: none;
 }
 
+/* ===== PHOTO GRID (NOT INSTAGRAM) ===== */
+
+.photo-grid {
+  column-count: 3;
+  column-gap: 20px;
+  max-width: 900px;
+}
+
+.photo-grid img {
+  width: 100%;
+  margin-bottom: 20px;
+  break-inside: avoid;
+}
+
 /* ===== MOBILE ===== */
+
 @media (max-width: 700px) {
 
   body {
@@ -87,13 +100,27 @@ img {
   }
 
   .content {
-    max-width: 100%;
     padding: 20px;
-    margin-left: 0;
-    text-align: left;
+  }
+
+  .section {
+    max-width: 100%;
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .photo-grid {
+    column-count: 1;
+  }
+
+  img,
+  .video-wrapper {
+    max-width: 100%;
   }
 }
