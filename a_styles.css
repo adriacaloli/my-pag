@@ -1,12 +1,11 @@
 /* ===== BASE ===== */
 body {
   margin: 0;
-  margin-left: 130px;
+  margin-left: 130px; /* sidebar space */
   background-color: #d0e8d0;
   font-family: 'Inter', sans-serif;
   color: #111;
-
-  overflow-x: hidden; /* prevents horizontal scroll */
+  overflow-x: hidden;
 }
 
 /* ===== CONTENT ===== */
@@ -14,7 +13,7 @@ body {
   width: 100%;
   max-width: 650px;
   padding: 60px 8vw;
-  margin-left: auto; /* keeps your right alignment on desktop */
+  margin-left: 0; /* ← anchors content to sidebar */
   box-sizing: border-box;
 
   text-align: right;
@@ -49,10 +48,16 @@ a:focus {
   color: #FF5DA2;
 }
 
-/* ===== MEDIA ===== */
+/* ===== MEDIA (images + video aligned properly) ===== */
+.media {
+  width: 100%;
+  max-width: 650px;
+  display: block;
+  margin: 0; /* ← prevents drifting */
+}
+
 img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -60,7 +65,7 @@ img {
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: 650px;
   padding-top: 56.25%;
   margin: 20px 0 40px;
 }
@@ -83,7 +88,6 @@ img {
 
   .content {
     max-width: 100%;
-    width: 100%;
     padding: 20px;
     margin-left: 0;
     text-align: left;
