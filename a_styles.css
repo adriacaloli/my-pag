@@ -13,7 +13,7 @@ body {
 .content {
  max-width: 520px;     /* ← tighter like music */
   padding: 60px 40px;   /* ← fixed padding, not vw */
-  margin-left: 90px;
+  margin-left: 120px;
 }
 
 .section {
