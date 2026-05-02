@@ -78,27 +78,74 @@ img {
 }
 
 /* ===== PHOTO GRID (NOT INSTAGRAM) ===== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 120px;
+  gap: 20px;
+}
 
+/* base */
 .photo-grid img {
   width: 100%;
-  margin-bottom: 20px;
-  break-inside: avoid;
+  height: 100%;
+  object-fit: cover;
 }
 
-.photo-grid img:nth-child(3n) {
-  margin-top: 60px;
+/* HERO (big dominant image) */
+.photo-grid img:nth-child(1) {
+  grid-column: span 4;
+  grid-row: span 4;
 }
 
-.photo-grid img:nth-child(5n) {
-  margin-top: 30px;
+/* secondary */
+.photo-grid img:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
-.photo-grid img:nth-child(4n) {
-  transform: scale(0.96);
+/* tall vertical */
+.photo-grid img:nth-child(3) {
+  grid-column: span 2;
+  grid-row: span 3;
 }
 
-.photo-grid img:nth-child(6n) {
-  transform: scale(1.08);
+/* wide strip */
+.photo-grid img:nth-child(4) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+/* offset feel */
+.photo-grid img:nth-child(5) {
+  grid-column: span 2;
+  grid-row: span 2;
+  transform: translateY(40px);
+}
+
+/* small detail */
+.photo-grid img:nth-child(6) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+/* another hero-ish */
+.photo-grid img:nth-child(7) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+/* broken rhythm */
+.photo-grid img:nth-child(8) {
+  grid-column: span 2;
+  grid-row: span 2;
+  transform: translateY(-30px);
+}
+
+/* anchor ending */
+.photo-grid img:nth-child(9) {
+  grid-column: span 4;
+  grid-row: span 2;
 }
 
 /* ===== MOBILE ===== */
@@ -125,9 +172,17 @@ img {
     font-size: 1.2rem;
   }
 
+@media (max-width: 700px) {
   .photo-grid {
-    column-count: 1;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
   }
+
+  .photo-grid img {
+    transform: none;
+    height: auto;
+  }
+
 
   img,
   .video-wrapper {
