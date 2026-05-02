@@ -19,66 +19,54 @@
 <link rel="stylesheet" href="sidebar.css">
 
 <style>
-  .content {
-    max-width: 900px;   /* wider */
-    margin-left: 180px; /* align with sidebar */
-    text-align: left;   /* CV should not be right-aligned */
-  }
+/* ONLY widen CV, do not move it */
 
+.content {
+  max-width: 800px;   /* wider than normal pages */
+}
+
+/* keep everything left-aligned and readable */
+
+.section {
+  max-width: 800px;
+}
+
+h1 {
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 40px;
+}
 
 .section h2 {
   color: #2A7885;
   font-weight: 700;
 }
+
+.section p,
+.section li {
+  font-size: 1rem;
+}
+
 .subitem {
   margin-left: 20px;
   margin-top: 5px;
   opacity: 0.9;
 }
-.section p, .section li {
-  font-size: 1rem;
-}
 
-.section {
-  max-width: 900px;
-}
-
-h1 {
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin-top: 40px;
-}
-body {
-  margin: 0;
-  background-color: #d0e8d0;
-  font-family: 'Space Grotesk', sans-serif;
-  color: #111;
-  margin-left: 130px;
-}
+/* MOBILE */
 @media (max-width: 700px) {
-  .content {
-    padding: 20px;
-  }
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.4rem; }
-}
-  @media (max-width: 700px) {
-
-  body {
-    margin-left: 0; /* remove sidebar offset */
-  }
 
   .content {
-    width: 100%;
     padding: 20px;
+    max-width: 100%;
   }
 
   h1 {
     font-size: 2rem;
-    line-height: 1.2;
   }
 
   h2 {
@@ -88,7 +76,6 @@ body {
   p, li {
     font-size: 1rem;
   }
-
 }
 </style>
 
