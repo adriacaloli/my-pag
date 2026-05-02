@@ -13,11 +13,11 @@ body {
 .content {
  max-width: 520px;     /* ← tighter like music */
   padding: 60px 40px;   /* ← fixed padding, not vw */
-  margin-left: 120px;
+  margin-left: 135px;
 }
 
 .section {
-  max-width: 900px;     /* FIX: no more narrow pages */
+  max-width: 520px;   /* match .content */   /* FIX: no more narrow pages */
   text-align: left;     /* FIX: no forced centering */
 }
 
