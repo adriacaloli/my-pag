@@ -79,73 +79,70 @@ img {
 
 /* ===== PHOTO GRID (NOT INSTAGRAM) ===== */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 120px;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;              /* consistent breathing room */
+  align-items: flex-start;
 }
 
-/* base */
+/* BASE IMAGE — NEVER CROP */
 .photo-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
-/* HERO (big dominant image) */
+/* ===== COMPOSITION (controlled irregularity) ===== */
+
+/* large hero */
 .photo-grid img:nth-child(1) {
-  grid-column: span 4;
-  grid-row: span 4;
+  width: 55%;
 }
 
-/* secondary */
+/* medium */
 .photo-grid img:nth-child(2) {
-  grid-column: span 2;
-  grid-row: span 2;
+  width: 35%;
+  margin-top: 40px;
 }
 
-/* tall vertical */
+/* horizontal wide */
 .photo-grid img:nth-child(3) {
-  grid-column: span 2;
-  grid-row: span 3;
+  width: 60%;
 }
 
-/* wide strip */
+/* small vertical */
 .photo-grid img:nth-child(4) {
-  grid-column: span 3;
-  grid-row: span 2;
+  width: 25%;
+  margin-top: 80px;
 }
 
-/* offset feel */
+/* medium */
 .photo-grid img:nth-child(5) {
-  grid-column: span 2;
-  grid-row: span 2;
-  transform: translateY(40px);
+  width: 40%;
 }
 
-/* small detail */
+/* small */
 .photo-grid img:nth-child(6) {
-  grid-column: span 1;
-  grid-row: span 2;
+  width: 25%;
+  margin-top: 60px;
 }
 
-/* another hero-ish */
+/* wide anchor */
 .photo-grid img:nth-child(7) {
-  grid-column: span 3;
-  grid-row: span 3;
+  width: 70%;
 }
 
-/* broken rhythm */
+/* small offset */
 .photo-grid img:nth-child(8) {
-  grid-column: span 2;
-  grid-row: span 2;
-  transform: translateY(-30px);
+  width: 30%;
+  margin-top: 50px;
 }
 
-/* anchor ending */
+/* ending piece */
 .photo-grid img:nth-child(9) {
-  grid-column: span 4;
-  grid-row: span 2;
+  width: 45%;
 }
 
 /* ===== MOBILE ===== */
@@ -173,15 +170,18 @@ img {
   }
 
 @media (max-width: 700px) {
+
   .photo-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .photo-grid img {
-    transform: none;
-    height: auto;
+    width: 100% !important;
+    margin-top: 0 !important;
   }
+
+}
 
 
   img,
