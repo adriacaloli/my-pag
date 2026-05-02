@@ -11,7 +11,7 @@ body {
 /* ===== CONTENT LAYOUT (ONE SYSTEM FOR ALL PAGES) ===== */
 
 .content {
- max-width: 520px;     /* ← tighter like music */
+ max-width: 720px;     /* ← tighter like music */
   padding: 60px 40px;   /* ← fixed padding, not vw */
   margin-left: 135px;
   box-sizing: border-box;
@@ -52,7 +52,7 @@ a:hover {
 
 img {
   width: 100%;
-  max-width: 520px;
+  max-width: 720px;
   display: block;
   border-radius: 8px;
 }
@@ -61,7 +61,7 @@ img {
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 720px;
   padding-top: 56.25%;
   margin: 20px 0 40px;
 }
@@ -80,7 +80,7 @@ img {
 .photo-grid {
   column-count: 2;
   column-gap: 16px;
-  max-width: 520px;
+  max-width: 720px;
 }
 
 .photo-grid img {
