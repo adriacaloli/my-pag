@@ -11,7 +11,9 @@ body {
 /* ===== CONTENT LAYOUT (ONE SYSTEM FOR ALL PAGES) ===== */
 
 .content {
-  padding: 60px 6vw;
+ max-width: 520px;     /* ← tighter like music */
+  padding: 60px 40px;   /* ← fixed padding, not vw */
+  margin-left: 0;
 }
 
 .section {
@@ -36,8 +38,8 @@ h2 {
 
 /* Text */
 p, li {
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.2;
 }
 
 /* Links */
