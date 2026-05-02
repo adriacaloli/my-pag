@@ -14,16 +14,12 @@ body {
  max-width: 520px;     /* ← tighter like music */
   padding: 60px 40px;   /* ← fixed padding, not vw */
   margin-left: 135px;
-}
-
-.section {
-  max-width: 520px;   /* match .content */   /* FIX: no more narrow pages */
-  text-align: left;     /* FIX: no forced centering */
+  box-sizing: border-box;
 }
 
 /* Titles centered, text not */
 h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
   font-weight: 600;
@@ -56,7 +52,7 @@ a:hover {
 
 img {
   width: 100%;
-  max-width: 900px;
+  max-width: 520px;
   display: block;
   border-radius: 8px;
 }
@@ -65,7 +61,7 @@ img {
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 520px;
   padding-top: 56.25%;
   margin: 20px 0 40px;
 }
@@ -82,14 +78,14 @@ img {
 /* ===== PHOTO GRID (NOT INSTAGRAM) ===== */
 
 .photo-grid {
-  column-count: 3;
-  column-gap: 20px;
-  max-width: 900px;
+  column-count: 2;
+  column-gap: 16px;
+  max-width: 520px;
 }
 
 .photo-grid img {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   break-inside: avoid;
 }
 
