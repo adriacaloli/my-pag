@@ -16,7 +16,9 @@ body {
   margin-left: 135px;
   box-sizing: border-box;
 }
-
+.cv-indent {
+  margin-left: 20px;
+}
 /* Titles centered, text not */
 h1 {
   font-size: 2rem;
