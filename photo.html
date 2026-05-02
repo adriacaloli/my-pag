@@ -19,55 +19,17 @@
 <link rel="stylesheet" href="sidebar.css">
 
 <style>
+/* ONLY page-specific tweak */
 
-/* ===== OVERRIDE WIDTH (IMPORTANT) ===== */
+/* wider gallery than text pages */
 .content {
   max-width: 1000px;
-  margin-left: 180px;
-  text-align: right;
 }
 
-/* ===== PHOTO GRID ===== */
-.photo-grid {
-  column-count: 3;
-  column-gap: 20px;
-  max-width: 900px;
-}
-
+/* OPTIONAL: make photos slightly rounder here only */
 .photo-grid img {
-  width: 100%;
-  margin-bottom: 20px;
-  break-inside: avoid;
   border-radius: 8px;
 }
-
-/* DESKTOP */
-@media (min-width: 900px) {
-  .photo-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-
-  body {
-    margin-left: 0;
-  }
-
-  .content {
-    max-width: 100%;
-    margin-left: 0;
-    padding: 20px;
-    text-align: left;
-  }
-
-  .photo-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
 </style>
 
 </head>
