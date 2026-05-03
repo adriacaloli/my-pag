@@ -12,37 +12,37 @@
 
 <style>
 
-/* keep alignment with sidebar */
+/* DO NOT TOUCH SIDEBAR → just align content */
 .content {
-  max-width: 1000px;
+  max-width: 900px;
 }
 
-/* editorial grid */
+/* ===== SIMPLE MASONRY (NO GRID BREAKING) ===== */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 24px;
+  column-count: 3;
+  column-gap: 30px;
 }
 
 /* images */
 .photo-grid img {
   width: 100%;
   height: auto;
+  margin-bottom: 30px;
   display: block;
+  break-inside: avoid;
 }
 
-/* layout */
-.photo1 { grid-column: span 7; }
-.photo2 { grid-column: span 5; }
-.photo3 { grid-column: span 6; }
-.photo4 { grid-column: span 3; }
-.photo5 { grid-column: span 3; }
-.photo6 { grid-column: span 8; }
-.photo7 { grid-column: span 4; }
-.photo8 { grid-column: span 7; }
-.photo9 { grid-column: span 5; }
+/* slight variation (editorial feel, but safe) */
+.photo-grid img:nth-child(2),
+.photo-grid img:nth-child(6) {
+  width: 85%;
+}
 
-/* mobile */
+.photo-grid img:nth-child(4) {
+  width: 70%;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 700px) {
 
   body {
@@ -55,7 +55,11 @@
   }
 
   .photo-grid {
-    grid-template-columns: 1fr;
+    column-count: 1;
+  }
+
+  .photo-grid img {
+    width: 100%;
   }
 }
 
@@ -78,15 +82,15 @@ fetch("sidebar.html")
 <div class="content">
 
   <div class="photo-grid">
-    <img src="photo1.jpg" class="photo1">
-    <img src="photo2.jpg" class="photo2">
-    <img src="photo3.jpg" class="photo3">
-    <img src="photo4.jpg" class="photo4">
-    <img src="photo5.jpg" class="photo5">
-    <img src="photo6.jpg" class="photo6">
-    <img src="photo7.jpg" class="photo7">
-    <img src="photo8.jpg" class="photo8">
-    <img src="photo9.jpg" class="photo9">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+    <img src="photo5.jpg">
+    <img src="photo6.jpg">
+    <img src="photo7.jpg">
+    <img src="photo8.jpg">
+    <img src="photo9.jpg">
   </div>
 
 </div>
