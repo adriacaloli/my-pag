@@ -7,34 +7,40 @@
 
 <title>Photos – Adriana Calahorra-Oliart</title>
 
+<!-- FONTS (IMPORTANT: matches other pages) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- GLOBAL -->
 <link rel="stylesheet" href="a_styles.css">
 <link rel="stylesheet" href="sidebar.css">
 
 <style>
 
-/* DO NOT TOUCH SIDEBAR → just align content */
-.content {
-  max-width: 900px;
-}
+/* DO NOT TOUCH layout system */
+/* only photo styling below */
 
-/* ===== SIMPLE MASONRY (NO GRID BREAKING) ===== */
+/* clean editorial column layout */
 .photo-grid {
   column-count: 3;
-  column-gap: 30px;
+  column-gap: 28px;
 }
 
 /* images */
 .photo-grid img {
   width: 100%;
   height: auto;
-  margin-bottom: 30px;
   display: block;
+  margin-bottom: 28px;
   break-inside: avoid;
 }
 
-/* slight variation (editorial feel, but safe) */
+/* subtle variation (not chaotic) */
 .photo-grid img:nth-child(2),
-.photo-grid img:nth-child(6) {
+.photo-grid img:nth-child(5) {
   width: 85%;
 }
 
@@ -42,7 +48,7 @@
   width: 70%;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media (max-width: 700px) {
 
   body {
@@ -51,7 +57,6 @@
 
   .content {
     padding: 20px;
-    max-width: 100%;
   }
 
   .photo-grid {
@@ -69,6 +74,7 @@
 
 <body>
 
+<!-- SIDEBAR -->
 <div id="sidebar"></div>
 
 <script>
@@ -79,6 +85,7 @@ fetch("sidebar.html")
   });
 </script>
 
+<!-- CONTENT -->
 <div class="content">
 
   <div class="photo-grid">
