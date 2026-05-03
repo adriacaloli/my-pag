@@ -7,98 +7,42 @@
 
 <title>Photos – Adriana Calahorra-Oliart</title>
 
-<!-- FONTS -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- GLOBAL -->
 <link rel="stylesheet" href="a_styles.css">
 <link rel="stylesheet" href="sidebar.css">
 
 <style>
 
-/* ===== WIDTH ===== */
+/* keep alignment with sidebar */
 .content {
   max-width: 1000px;
 }
 
-/* ===== PROPORTIONAL GRID ===== */
+/* editorial grid */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 160px;   /* ← MASTER UNIT */
-  gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
 }
 
-/* ===== IMAGES ===== */
+/* images */
 .photo-grid img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;  /* NEVER crop */
+  height: auto;
   display: block;
 }
 
-/* ===== SIZE SYSTEM ===== */
-/* SMALL = 2x2 */
-/* LARGE = 4x4 */
-/* HORIZONTAL = 4x2 */
-/* VERTICAL = 2x4 */
+/* layout */
+.photo1 { grid-column: span 7; }
+.photo2 { grid-column: span 5; }
+.photo3 { grid-column: span 6; }
+.photo4 { grid-column: span 3; }
+.photo5 { grid-column: span 3; }
+.photo6 { grid-column: span 8; }
+.photo7 { grid-column: span 4; }
+.photo8 { grid-column: span 7; }
+.photo9 { grid-column: span 5; }
 
-/* BIG */
-.photo1 {
-  grid-column: span 4;
-  grid-row: span 4;
-}
-
-/* SMALL */
-.photo2 {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.photo3 {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-/* HORIZONTAL (same height as 2 small stacked) */
-.photo4 {
-  grid-column: span 4;
-  grid-row: span 2;
-}
-
-/* VERTICAL (same height as big split) */
-.photo5 {
-  grid-column: span 2;
-  grid-row: span 4;
-}
-
-/* SMALL */
-.photo6 {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.photo7 {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-/* BIG */
-.photo8 {
-  grid-column: span 4;
-  grid-row: span 4;
-}
-
-/* SMALL */
-.photo9 {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-/* ===== MOBILE ===== */
+/* mobile */
 @media (max-width: 700px) {
 
   body {
@@ -106,18 +50,12 @@
   }
 
   .content {
-    max-width: 100%;
     padding: 20px;
+    max-width: 100%;
   }
 
   .photo-grid {
-    display: block;
-  }
-
-  .photo-grid img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -127,8 +65,8 @@
 
 <body>
 
-<!-- SIDEBAR -->
 <div id="sidebar"></div>
+
 <script>
 fetch("sidebar.html")
   .then(r => r.text())
@@ -137,7 +75,6 @@ fetch("sidebar.html")
   });
 </script>
 
-<!-- CONTENT -->
 <div class="content">
 
   <div class="photo-grid">
