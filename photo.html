@@ -11,72 +11,91 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- GLOBAL STYLES -->
+<!-- GLOBAL -->
 <link rel="stylesheet" href="a_styles.css">
 <link rel="stylesheet" href="sidebar.css">
 
 <style>
 
-/* ===== PAGE WIDTH (wider than text pages) ===== */
+/* ===== WIDTH ===== */
 .content {
-  max-width: 900px;
+  max-width: 1000px;
 }
 
-/* ===== EDITORIAL FLOW (NO GRID) ===== */
+/* ===== PROPORTIONAL GRID ===== */
 .photo-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-
-  max-width: 900px;
-  margin-left: 0; /* aligns with your content column */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 160px;   /* ← MASTER UNIT */
+  gap: 20px;
 }
 
-/* BASE IMAGE */
+/* ===== IMAGES ===== */
 .photo-grid img {
-  width: 60%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* NEVER crop */
   display: block;
-  border-radius: 0; /* no rounded corners */
 }
 
-/* ===== CONTROLLED OFFSETS ===== */
+/* ===== SIZE SYSTEM ===== */
+/* SMALL = 2x2 */
+/* LARGE = 4x4 */
+/* HORIZONTAL = 4x2 */
+/* VERTICAL = 2x4 */
 
-.photo-grid img:nth-child(2) {
-  margin-left: 120px;
+/* BIG */
+.photo1 {
+  grid-column: span 4;
+  grid-row: span 4;
 }
 
-.photo-grid img:nth-child(3) {
-  width: 75%;
+/* SMALL */
+.photo2 {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
-.photo-grid img:nth-child(4) {
-  width: 40%;
-  margin-left: 200px;
+.photo3 {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
-.photo-grid img:nth-child(5) {
-  width: 55%;
+/* HORIZONTAL (same height as 2 small stacked) */
+.photo4 {
+  grid-column: span 4;
+  grid-row: span 2;
 }
 
-.photo-grid img:nth-child(6) {
-  margin-left: 150px;
+/* VERTICAL (same height as big split) */
+.photo5 {
+  grid-column: span 2;
+  grid-row: span 4;
 }
 
-.photo-grid img:nth-child(7) {
-  width: 80%;
+/* SMALL */
+.photo6 {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
-.photo-grid img:nth-child(8) {
-  width: 35%;
-  margin-left: 220px;
+.photo7 {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
-.photo-grid img:nth-child(9) {
-  width: 60%;
+/* BIG */
+.photo8 {
+  grid-column: span 4;
+  grid-row: span 4;
+}
+
+/* SMALL */
+.photo9 {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 /* ===== MOBILE ===== */
@@ -88,19 +107,18 @@
 
   .content {
     max-width: 100%;
-    margin-left: 0;
     padding: 20px;
   }
 
   .photo-grid {
-    gap: 40px;
+    display: block;
   }
 
   .photo-grid img {
-    width: 100% !important;
-    margin-left: 0 !important;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
-
 }
 
 </style>
@@ -111,7 +129,6 @@
 
 <!-- SIDEBAR -->
 <div id="sidebar"></div>
-
 <script>
 fetch("sidebar.html")
   .then(r => r.text())
@@ -123,18 +140,16 @@ fetch("sidebar.html")
 <!-- CONTENT -->
 <div class="content">
 
-  <h1></h1>
-
   <div class="photo-grid">
-    <img src="photo1.jpg">
-    <img src="photo2.jpg">
-    <img src="photo3.jpg">
-    <img src="photo4.jpg">
-    <img src="photo5.jpg">
-    <img src="photo6.jpg">
-    <img src="photo7.jpg">
-    <img src="photo8.jpg">
-    <img src="photo9.jpg">
+    <img src="photo1.jpg" class="photo1">
+    <img src="photo2.jpg" class="photo2">
+    <img src="photo3.jpg" class="photo3">
+    <img src="photo4.jpg" class="photo4">
+    <img src="photo5.jpg" class="photo5">
+    <img src="photo6.jpg" class="photo6">
+    <img src="photo7.jpg" class="photo7">
+    <img src="photo8.jpg" class="photo8">
+    <img src="photo9.jpg" class="photo9">
   </div>
 
 </div>
