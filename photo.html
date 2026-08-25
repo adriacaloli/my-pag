@@ -7,81 +7,157 @@
 
 <title>Photos – Adriana Calahorra-Oliart</title>
 
-<!-- FONTS (IMPORTANT: matches other pages) -->
+<!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+  rel="stylesheet"
+/>
 
 <!-- GLOBAL -->
 <link rel="stylesheet" href="a_styles.css">
 <link rel="stylesheet" href="sidebar.css">
 
+
 <style>
 
-/* DO NOT TOUCH layout system */
-/* only photo styling below */
+/* =========================================================
+   PHOTO PAGE
+   Loose editorial composition.
+   No masonry, no Instagram-style grid.
+   ========================================================= */
 
-/* clean editorial column layout */
-/* EDITORIAL PHOTO LAYOUT */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 24px;
-  row-gap: 36px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
 }
 
-.photo-grid img {
-  width: 100%;
-  height: auto;
+
+/* ---------- GENERAL ROW ---------- */
+
+.photo-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 55px;
+}
+
+.photo-row img {
   display: block;
-}
-
-/* larger, more coherent rhythm */
-
-.photo-grid img:nth-child(1) {
-  grid-column: 1 / 8;
-}
-
-.photo-grid img:nth-child(2) {
-  grid-column: 8 / 13;
-  margin-top: 40px;
-}
-
-.photo-grid img:nth-child(3) {
-  grid-column: 2 / 7;
-}
-
-.photo-grid img:nth-child(4) {
-  grid-column: 7 / 13;
-}
-
-.photo-grid img:nth-child(5) {
-  grid-column: 1 / 6;
-}
-
-.photo-grid img:nth-child(6) {
-  grid-column: 6 / 13;
-  margin-top: 30px;
-}
-
-.photo-grid img:nth-child(7) {
-  grid-column: 2 / 9;
-}
-
-.photo-grid img:nth-child(8) {
-  grid-column: 8 / 13;
-  margin-top: 50px;
-}
-
-.photo-grid img:nth-child(9) {
-  grid-column: 1 / 7;
+  height: auto;
+  object-fit: contain;
 }
 
 
-/* MOBILE */
+/* =========================================================
+   ROW 1
+   Large image + smaller image
+   ========================================================= */
+
+.row-1 {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row-1 img:first-child {
+  width: 48%;
+}
+
+.row-1 img:last-child {
+  width: 27%;
+}
+
+
+/* =========================================================
+   ROW 2
+   Medium image + smaller offset image
+   ========================================================= */
+
+.row-2 {
+  justify-content: center;
+  gap: 90px;
+}
+
+.row-2 img:first-child {
+  width: 36%;
+}
+
+.row-2 img:last-child {
+  width: 23%;
+  margin-top: 90px;
+}
+
+
+/* =========================================================
+   ROW 3
+   Two differently sized images
+   ========================================================= */
+
+.row-3 {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row-3 img:first-child {
+  width: 28%;
+}
+
+.row-3 img:last-child {
+  width: 32%;
+}
+
+
+/* =========================================================
+   ROW 4
+   One dominant image
+   ========================================================= */
+
+.row-4 {
+  justify-content: flex-start;
+}
+
+.row-4 img {
+  width: 58%;
+  margin-left: 9%;
+}
+
+
+/* =========================================================
+   ROW 5
+   Uneven final pair
+   ========================================================= */
+
+.row-5 {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.row-5 img:first-child {
+  width: 34%;
+}
+
+.row-5 img:last-child {
+  width: 24%;
+  margin-top: 80px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 700px) {
 
   body {
@@ -93,22 +169,41 @@
   }
 
   .photo-grid {
+    gap: 28px;
+  }
+
+  .photo-row {
     display: block;
   }
 
-  .photo-grid img {
+  .photo-row img,
+  .row-1 img:first-child,
+  .row-1 img:last-child,
+  .row-2 img:first-child,
+  .row-2 img:last-child,
+  .row-3 img:first-child,
+  .row-3 img:last-child,
+  .row-4 img,
+  .row-5 img:first-child,
+  .row-5 img:last-child {
     width: 100%;
-    margin: 0 0 24px 0;
+    margin: 0 0 28px 0;
   }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<!-- SIDEBAR -->
+
+<!-- =======================================================
+     SIDEBAR
+     ======================================================= -->
+
 <div id="sidebar"></div>
 
 <script>
@@ -119,22 +214,101 @@ fetch("sidebar.html")
   });
 </script>
 
-<!-- CONTENT -->
+
+<!-- =======================================================
+     CONTENT
+     ======================================================= -->
+
 <div class="content">
 
   <div class="photo-grid">
-    <img src="photo1.jpg">
-    <img src="photo2.jpg">
-    <img src="photo3.jpg">
-    <img src="photo4.jpg">
-    <img src="photo5.jpg">
-    <img src="photo6.jpg">
-    <img src="photo7.jpg">
-    <img src="photo8.jpg">
-    <img src="photo9.jpg">
+
+
+    <!-- ROW 1 -->
+
+    <div class="photo-row row-1">
+
+      <img
+        src="photo1.jpg"
+        alt=""
+      >
+
+      <img
+        src="photo2.jpg"
+        alt=""
+      >
+
+    </div>
+
+
+    <!-- ROW 2 -->
+
+    <div class="photo-row row-2">
+
+      <img
+        src="photo3.jpg"
+        alt=""
+      >
+
+      <img
+        src="photo4.jpg"
+        alt=""
+      >
+
+    </div>
+
+
+    <!-- ROW 3 -->
+
+    <div class="photo-row row-3">
+
+      <img
+        src="photo5.jpg"
+        alt=""
+      >
+
+      <img
+        src="photo6.jpg"
+        alt=""
+      >
+
+    </div>
+
+
+    <!-- ROW 4 -->
+
+    <div class="photo-row row-4">
+
+      <img
+        src="photo7.jpg"
+        alt=""
+      >
+
+    </div>
+
+
+    <!-- ROW 5 -->
+
+    <div class="photo-row row-5">
+
+      <img
+        src="photo8.jpg"
+        alt=""
+      >
+
+      <img
+        src="photo9.jpg"
+        alt=""
+      >
+
+    </div>
+
+
   </div>
 
 </div>
 
+
 </body>
+
 </html>
