@@ -8,23 +8,21 @@
 <title>Photos – Adriana Calahorra-Oliart</title>
 
 <!-- FONTS -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
   href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap"
-  rel="stylesheet"
-/>
+  rel="stylesheet">
 
 <link
   href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
-  rel="stylesheet"
-/>
+  rel="stylesheet">
 
 <link
   href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
-  rel="stylesheet"
-/>
+  rel="stylesheet">
+
 
 <!-- GLOBAL -->
 <link rel="stylesheet" href="a_styles.css">
@@ -35,122 +33,137 @@
 
 /* =========================================================
    PHOTO PAGE
-   Loose editorial composition.
-   No masonry, no Instagram-style grid.
    ========================================================= */
 
-.photo-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
+.photo-page {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 30px 35px 100px;
+  box-sizing: border-box;
 }
 
 
-/* ---------- GENERAL ROW ---------- */
+/* =========================================================
+   PHOTO LAYOUT
+   ========================================================= */
 
-.photo-row {
+.photo-layout {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 55px;
 }
 
-.photo-row img {
+
+/* GENERAL */
+
+.photo-line {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.photo-line img {
   display: block;
   height: auto;
   object-fit: contain;
+  flex: none;
 }
 
 
 /* =========================================================
-   ROW 1
-   Large image + smaller image
+   LINE 1
+   big left / smaller right
    ========================================================= */
 
-.row-1 {
+.line-1 {
   justify-content: space-between;
-  align-items: center;
-}
-
-.row-1 img:first-child {
-  width: 48%;
-}
-
-.row-1 img:last-child {
-  width: 27%;
-}
-
-
-/* =========================================================
-   ROW 2
-   Medium image + smaller offset image
-   ========================================================= */
-
-.row-2 {
-  justify-content: center;
-  gap: 90px;
-}
-
-.row-2 img:first-child {
-  width: 36%;
-}
-
-.row-2 img:last-child {
-  width: 23%;
-  margin-top: 90px;
-}
-
-
-/* =========================================================
-   ROW 3
-   Two differently sized images
-   ========================================================= */
-
-.row-3 {
-  justify-content: space-between;
-  align-items: center;
-}
-
-.row-3 img:first-child {
-  width: 28%;
-}
-
-.row-3 img:last-child {
-  width: 32%;
-}
-
-
-/* =========================================================
-   ROW 4
-   One dominant image
-   ========================================================= */
-
-.row-4 {
-  justify-content: flex-start;
-}
-
-.row-4 img {
-  width: 58%;
-  margin-left: 9%;
-}
-
-
-/* =========================================================
-   ROW 5
-   Uneven final pair
-   ========================================================= */
-
-.row-5 {
-  justify-content: flex-end;
   align-items: flex-start;
 }
 
-.row-5 img:first-child {
-  width: 34%;
+.line-1 .photo1 {
+  width: clamp(360px, 55%, 610px);
 }
 
-.row-5 img:last-child {
-  width: 24%;
-  margin-top: 80px;
+.line-1 .photo2 {
+  width: clamp(210px, 28%, 315px);
+  margin-top: 70px;
+}
+
+
+/* =========================================================
+   LINE 2
+   smaller left / big right
+   ========================================================= */
+
+.line-2 {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4%;
+}
+
+.line-2 .photo3 {
+  width: clamp(260px, 34%, 380px);
+}
+
+.line-2 .photo4 {
+  width: clamp(330px, 45%, 500px);
+}
+
+
+/* =========================================================
+   LINE 3
+   one big central image
+   ========================================================= */
+
+.line-3 {
+  justify-content: center;
+}
+
+.line-3 .photo5 {
+  width: clamp(480px, 66%, 720px);
+}
+
+
+/* =========================================================
+   LINE 4
+   uneven pair
+   ========================================================= */
+
+.line-4 {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.line-4 .photo6 {
+  width: clamp(300px, 40%, 450px);
+  margin-left: 5%;
+}
+
+.line-4 .photo7 {
+  width: clamp(230px, 30%, 340px);
+  margin-right: 4%;
+  margin-bottom: 60px;
+}
+
+
+/* =========================================================
+   LINE 5
+   large left / medium right
+   ========================================================= */
+
+.line-5 {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.line-5 .photo8 {
+  width: clamp(400px, 55%, 610px);
+}
+
+.line-5 .photo9 {
+  width: clamp(250px, 33%, 370px);
+  margin-top: 100px;
 }
 
 
@@ -165,29 +178,35 @@
   }
 
   .content {
-    padding: 20px;
+    padding: 0;
   }
 
-  .photo-grid {
-    gap: 28px;
+  .photo-page {
+    padding: 20px 18px 60px;
   }
 
-  .photo-row {
+  .photo-layout {
+    gap: 24px;
+  }
+
+  .photo-line {
     display: block;
+    padding: 0;
   }
 
-  .photo-row img,
-  .row-1 img:first-child,
-  .row-1 img:last-child,
-  .row-2 img:first-child,
-  .row-2 img:last-child,
-  .row-3 img:first-child,
-  .row-3 img:last-child,
-  .row-4 img,
-  .row-5 img:first-child,
-  .row-5 img:last-child {
+  .photo-line img,
+  .line-1 .photo1,
+  .line-1 .photo2,
+  .line-2 .photo3,
+  .line-2 .photo4,
+  .line-3 .photo5,
+  .line-4 .photo6,
+  .line-4 .photo7,
+  .line-5 .photo8,
+  .line-5 .photo9 {
+
     width: 100%;
-    margin: 0 0 28px 0;
+    margin: 0 0 24px 0;
   }
 
 }
@@ -200,10 +219,7 @@
 <body>
 
 
-<!-- =======================================================
-     SIDEBAR
-     ======================================================= -->
-
+<!-- SIDEBAR -->
 <div id="sidebar"></div>
 
 <script>
@@ -215,94 +231,95 @@ fetch("sidebar.html")
 </script>
 
 
-<!-- =======================================================
-     CONTENT
-     ======================================================= -->
-
+<!-- CONTENT -->
 <div class="content">
 
-  <div class="photo-grid">
+  <div class="photo-page">
+
+    <div class="photo-layout">
 
 
-    <!-- ROW 1 -->
+      <!-- LINE 1 -->
 
-    <div class="photo-row row-1">
+      <div class="photo-line line-1">
 
-      <img
-        src="photo1.jpg"
-        alt=""
-      >
+        <img
+          class="photo1"
+          src="photo1.jpg"
+          alt="">
 
-      <img
-        src="photo2.jpg"
-        alt=""
-      >
+        <img
+          class="photo2"
+          src="photo2.jpg"
+          alt="">
+
+      </div>
+
+
+      <!-- LINE 2 -->
+
+      <div class="photo-line line-2">
+
+        <img
+          class="photo3"
+          src="photo3.jpg"
+          alt="">
+
+        <img
+          class="photo4"
+          src="photo4.jpg"
+          alt="">
+
+      </div>
+
+
+      <!-- LINE 3 -->
+
+      <div class="photo-line line-3">
+
+        <img
+          class="photo5"
+          src="photo5.jpg"
+          alt="">
+
+      </div>
+
+
+      <!-- LINE 4 -->
+
+      <div class="photo-line line-4">
+
+        <img
+          class="photo6"
+          src="photo6.jpg"
+          alt="">
+
+        <img
+          class="photo7"
+          src="photo7.jpg"
+          alt="">
+
+      </div>
+
+
+      <!-- LINE 5 -->
+
+      <div class="photo-line line-5">
+
+        <img
+          class="photo8"
+          src="photo8.jpg"
+          alt="">
+
+        <img
+          class="photo9"
+          src="photo9.jpg"
+          alt="">
+
+      </div>
+
 
     </div>
-
-
-    <!-- ROW 2 -->
-
-    <div class="photo-row row-2">
-
-      <img
-        src="photo3.jpg"
-        alt=""
-      >
-
-      <img
-        src="photo4.jpg"
-        alt=""
-      >
-
-    </div>
-
-
-    <!-- ROW 3 -->
-
-    <div class="photo-row row-3">
-
-      <img
-        src="photo5.jpg"
-        alt=""
-      >
-
-      <img
-        src="photo6.jpg"
-        alt=""
-      >
-
-    </div>
-
-
-    <!-- ROW 4 -->
-
-    <div class="photo-row row-4">
-
-      <img
-        src="photo7.jpg"
-        alt=""
-      >
-
-    </div>
-
-
-    <!-- ROW 5 -->
-
-    <div class="photo-row row-5">
-
-      <img
-        src="photo8.jpg"
-        alt=""
-      >
-
-      <img
-        src="photo9.jpg"
-        alt=""
-      >
-
-    </div>
-
 
   </div>
 
@@ -310,5 +327,4 @@ fetch("sidebar.html")
 
 
 </body>
-
 </html>
