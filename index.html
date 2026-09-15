@@ -75,6 +75,43 @@
       line-height: 1.6;
     }
 
+
+    /* NEWS AND UPDATES — ONLY NEW CSS */
+
+    .news {
+      max-width: 650px;
+      margin-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .news h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 25px 0;
+    }
+
+    .news-item {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin-bottom: 22px;
+    }
+
+    .news-date {
+      font-weight: 700;
+    }
+
+    .news a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .news a:hover {
+      color: #FF5DA2;
+    }
+
+
     /* ===== MOBILE (same logic as your working page) ===== */
     @media (max-width: 700px) {
 
@@ -112,7 +149,6 @@
 
   <!-- SIDEBAR -->
   <div id="sidebar"></div>
-
   <script>
     fetch("sidebar.html")
       .then(r => r.text())
@@ -146,8 +182,43 @@
       </p>
     </div>
 
+
+    <!-- NEWS AND UPDATES — ONLY NEW HTML -->
+
+    <div class="news">
+
+      <h2>news and updates</h2>
+
+      <div class="news-item">
+        <span class="news-date">September 11, 2026:</span>
+        I was honoured to be invited to El Colegio Nacional to give a talk about bats and some of the work I'm doing with them.
+        You can watch it
+        <a href="https://www.youtube.com/watch?v=4-VjaCZM5dA"
+           target="_blank"
+           rel="noopener noreferrer">here</a>.
+      </div>
+
+      <div class="news-item">
+        <span class="news-date">August 31, 2026:</span>
+        The "batdog" paper is out!! This is work I carried out in
+        <a href="https://www.yohelab.net/"
+           target="_blank"
+           rel="noopener noreferrer">Dr. Yohe's lab</a>
+        during my first postdoctoral appointment at UNC Charlotte.
+        You can read the paper
+        <a href="https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpag151/8777100"
+           target="_blank"
+           rel="noopener noreferrer">here</a>.
+      </div>
+
+      <div class="news-item">
+        <span class="news-date">July 28 – August 14, 2026:</span>
+        I'll be visiting the American Museum of Natural History in New York, United States to collect some morphometric data : )
+      </div>
+
+    </div>
+
   </div>
 
 </body>
-
 </html>
