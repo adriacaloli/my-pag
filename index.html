@@ -148,4 +148,215 @@
   </div>
 
 </body>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Photos – Adriana Calahorra-Oliart</title>
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- GLOBAL -->
+<link rel="stylesheet" href="a_styles.css">
+<link rel="stylesheet" href="sidebar.css">
+
+<style>
+
+/* =========================================================
+   PHOTO PAGE
+   ========================================================= */
+
+.photo-gallery {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 0 100px;
+}
+
+.photo-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 55px;
+}
+
+
+/* =========================================================
+   NEWS AND UPDATES
+   ========================================================= */
+
+.news {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 0 100px;
+}
+
+.news h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0 0 28px 0;
+}
+
+.news-item {
+  margin-bottom: 26px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.news-date {
+  font-weight: 700;
+}
+
+.news a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.news a:hover {
+  color: #FF5DA2;
+  border-color: #FF5DA2;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  body {
+    margin-left: 0;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .photo-gallery {
+    width: 100%;
+    padding: 10px 0 55px;
+  }
+
+  .photo-gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .news {
+    width: 100%;
+    padding: 0 0 50px;
+  }
+
+  .news-item {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<div id="sidebar"></div>
+
+<script>
+fetch("sidebar.html")
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("sidebar").innerHTML = html;
+  });
+</script>
+
+
+<!-- CONTENT -->
+
+<div class="content">
+
+
+  <!-- PHOTOS -->
+
+  <div class="photo-gallery">
+
+    <img src="photo1.jpg" alt="">
+    <img src="photo2.jpg" alt="">
+    <img src="photo3.jpg" alt="">
+    <img src="photo4.jpg" alt="">
+    <img src="photo5.jpg" alt="">
+    <img src="photo6.jpg" alt="">
+    <img src="photo7.jpg" alt="">
+    <img src="photo8.jpg" alt="">
+    <img src="photo9.jpg" alt="">
+
+  </div>
+
+
+  <!-- NEWS -->
+
+  <div class="news">
+
+    <h2>news and updates</h2>
+
+
+    <div class="news-item">
+      <span class="news-date">September 11, 2026:</span>
+      I was honoured to be invited to El Colegio Nacional to give a talk about
+      bats and some of the work I'm doing with them.
+      You can watch it
+      <a href="https://www.youtube.com/watch?v=4-VjaCZM5dA"
+         target="_blank"
+         rel="noopener noreferrer">here</a>.
+    </div>
+
+
+    <div class="news-item">
+      <span class="news-date">August 31, 2026:</span>
+      The "batdog" paper is out!! This is work I carried out in
+      <a href="https://www.yohelab.net/"
+         target="_blank"
+         rel="noopener noreferrer">Dr. Yohe's lab</a>
+      during my first postdoctoral appointment at UNC Charlotte.
+      You can read the paper
+      <a href="https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpag151/8777100"
+         target="_blank"
+         rel="noopener noreferrer">here</a>.
+    </div>
+
+
+    <div class="news-item">
+      <span class="news-date">July 28 – August 14, 2026:</span>
+      I'll be visiting the American Museum of Natural History in New York,
+      United States to collect some morphometric data : )
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+</body>
+
+
 </html>
