@@ -17,9 +17,7 @@
   <link rel="stylesheet" href="sidebar.css">
 
   <style>
-
     /* EXACT SAME BASE AS YOUR WORKING PAGE */
-
     body {
       margin: 0;
       background-color: #d0e8d0;
@@ -32,9 +30,7 @@
       padding: 60px 8vw;
     }
 
-
     /* HERO */
-
     .hero {
       display: flex;
       align-items: center;
@@ -59,7 +55,6 @@
       margin: 0 0 10px 0;
       font-weight: 600;
       letter-spacing: -1px;
-      white-space: nowrap;
     }
 
     .subtitle {
@@ -67,9 +62,6 @@
       font-size: 1.5rem;
       letter-spacing: -0.5px;
     }
-
-
-    /* BIO */
 
     .divider {
       height: 1px;
@@ -83,45 +75,7 @@
       line-height: 1.6;
     }
 
-
-    /* NEWS AND UPDATES */
-
-    .news {
-      max-width: 700px;
-      margin-top: 70px;
-      padding-bottom: 40px;
-    }
-
-    .news h2 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 0 0 28px 0;
-    }
-
-    .news-item {
-      font-size: 0.95rem;
-      line-height: 1.55;
-      margin-bottom: 24px;
-    }
-
-    .news-date {
-      font-weight: 700;
-    }
-
-    .news a {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(0,0,0,0.35);
-    }
-
-    .news a:hover {
-      color: #FF5DA2;
-      border-color: #FF5DA2;
-    }
-
-
     /* ===== MOBILE (same logic as your working page) ===== */
-
     @media (max-width: 700px) {
 
       body {
@@ -139,7 +93,6 @@
 
       h1 {
         font-size: 2.2rem;
-        white-space: normal;
       }
 
       .subtitle {
@@ -149,23 +102,15 @@
       .content {
         padding: 20px;
       }
-
-      .news {
-        margin-top: 50px;
-      }
-
     }
 
   </style>
 
 </head>
 
-
 <body>
 
-
   <!-- SIDEBAR -->
-
   <div id="sidebar"></div>
 
   <script>
@@ -176,13 +121,8 @@
       });
   </script>
 
-
   <!-- CONTENT -->
-
   <div class="content">
-
-
-    <!-- HERO -->
 
     <div class="hero">
 
@@ -195,86 +135,18 @@
 
     </div>
 
-
     <div class="divider"></div>
 
-
-    <!-- BIO -->
-
     <div class="bio">
-
       <p>
         I am fascinated by biological shape and by the evolutionary questions that
         can be addressed with its study. Firm believer that science should be
         applied in creating positive changes in the world, socially and ecologically.
         <br>I am currently looking to develop a line of research based on geometric morphometrics (including theoretical morphometrics), use of machine learning tools, and integrative taxonomy.
       </p>
-
     </div>
-
-
-    <!-- NEWS AND UPDATES -->
-
-    <div class="news">
-
-      <h2>news and updates</h2>
-
-
-      <div class="news-item">
-
-        <span class="news-date">September 11, 2026:</span>
-
-        I was honoured to be invited to El Colegio Nacional to give a talk about
-        bats and some of the work I'm doing with them. You can watch it
-
-        <a
-          href="https://www.youtube.com/watch?v=4-VjaCZM5dA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >here</a>.
-
-      </div>
-
-
-      <div class="news-item">
-
-        <span class="news-date">August 31, 2026:</span>
-
-        The "batdog" paper is out!! This is work I carried out in
-
-        <a
-          href="https://www.yohelab.net/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Dr. Yohe's lab</a>
-
-        during my first postdoctoral appointment at UNC Charlotte.
-        You can read the paper
-
-        <a
-          href="https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpag151/8777100"
-          target="_blank"
-          rel="noopener noreferrer"
-        >here</a>.
-
-      </div>
-
-
-      <div class="news-item">
-
-        <span class="news-date">July 28 – August 14, 2026:</span>
-
-        I'll be visiting the American Museum of Natural History in New York,
-        United States to collect some morphometric data : )
-
-      </div>
-
-
-    </div>
-
 
   </div>
-
 
 </body>
 
