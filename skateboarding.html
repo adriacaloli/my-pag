@@ -20,11 +20,34 @@
 <style>
 /* ONLY page-specific tweaks */
 
-.banner {
+.photo-block {
   width: 100%;
   max-width: 720px;
   margin: 10px 0 20px 0;
 }
+
+.banner {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.photo-credit {
+  margin: 5px 0 0 0;
+  text-align: right;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.photo-credit a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.photo-credit a:hover {
+  color: #FF5DA2;
+}
+
 </style>
 
 </head>
@@ -51,7 +74,18 @@ fetch("sidebar.html")
   </p>
 
   <!-- PHOTO -->
-  <img src="skatephoto_r.jpg" class="banner">
+  <div class="photo-block">
+
+    <img src="skatephoto_r.jpg" class="banner" alt="Skateboarding">
+
+    <p class="photo-credit">
+      Photo by
+      <a href="https://www.instagram.com/rogerferrero/"
+         target="_blank"
+         rel="noopener noreferrer">Roger Ferrero</a>
+    </p>
+
+  </div>
 
   <h2>My videopart</h2>
 
